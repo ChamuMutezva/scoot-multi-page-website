@@ -1,4 +1,87 @@
+//import HomeMobile from '../../assets/images/about-hero-mobile';
 @use '../base';
-.App {
-    font-family: base.$primary-font;
+
+.hero {
+  //  background-image: url("../../assets/images/about-hero-mobile.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 0%;
+  top: -0.3rem;
+}
+
+.inner__img {
+  display: block;
+}
+
+.hero__title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: base.$white;
+  font-family: base.$secondary-font;
+  line-height: 1.2;
+}
+
+// HOME PAGE - HERO SECTION - IMAGE
+.hero__home {
+  background-image: url("../../assets/images/home-hero-mobile.jpg");
+
+  .hero__wrapper {
+    top: 6.5rem;
+    position: relative;
+    padding: 0 2rem;
+  }
+
+  .inner__img {
+    padding-top: 110%;
+  }
+
+  .hero__content {
+    color: base.$white;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .hero__btn__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 200px;
+    background-image: url("../../assets/patterns/right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 100%;
+    bottom: 10%;
+    left: -62%;
+  }
+}
+
+//ABOUT PAGE - HERO SECTION - IMAGE
+.hero__about {
+  background-image: url("../../assets/images/about-hero-mobile.jpg");
+  .inner__img {
+    padding-top: 43%;
+  }
+
+  .hero__content {
+    display: none;
+  }
+}
+
+// CAREERS & LOCATION - HERO SECTION - IMAGE
+.hero__careers,
+.hero__location {
+  background-image: url("../../assets/images/careers-location-hero-mobile.jpg");
+  .inner__img {
+    padding-top: 43%;
+  }
+  .hero__content {
+    display: none;
+  }
 }

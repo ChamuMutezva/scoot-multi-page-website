@@ -1,0 +1,81 @@
+@use '../base';
+
+.nav {
+  display: flex;
+  padding: 1.25rem;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.menu__control {
+  position: relative;
+}
+.close__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.logo__wrapper {
+  margin: auto;
+}
+.modal__container {
+	display: none; //remove this
+  position: absolute;
+  top: 4rem;
+  left: 0rem;
+  width: 68%;
+  background-color: base.$mid-grey;
+  // background: none; // to change this
+  height: 100vh;
+  z-index: 1;
+}
+
+.show__menu,
+.close__menu {
+  border: none;
+  background: none;
+}
+
+.nav__item--btn {
+  color: white;
+  color: black; // to change this
+}
+
+.wrapper__scoot--btn {
+  background-color: base.$yellow;
+  border: none;
+}
+
+@media screen and (min-width: 38.75rem) {
+  .menu__control {
+    display: none;
+  }
+  .modal__container {	
+    background-color: inherit;
+    position: relative;
+    top: 0;
+    height: auto;
+    width: max-content;
+    flex: 1 1 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .navigation__items {
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: space-between;
+  }
+  .logo__wrapper {
+    flex: 1 1 20%;
+  }
+  .nav__item--btn {
+    color: base.$mid-lt-grey;
+  }
+  .wrapper__scoot {
+    flex: 1 1 15%;
+    text-align: right;
+  }
+}
