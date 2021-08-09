@@ -95,6 +95,13 @@
   }
 }
 
+
+
+.cards__secondary--btn {
+  margin: auto;
+  display: block;
+}
+
 .wrapper__scoot {
   margin: 0 auto;
   @media screen and (min-width: 38.75rem) {
@@ -106,8 +113,8 @@
   }
 
   @media screen and (min-width: 67.5rem) {
-   // justify-content: flex-start;
-   // margin-left: 3rem;
+    // justify-content: flex-start;
+    // margin-left: 3rem;
   }
 }
 
@@ -153,5 +160,18 @@
 
   @media screen and (min-width: 38.75rem) {
     margin-top: 0;
+  }
+}
+
+.scoot__hero__wrapper {
+  @media screen and (min-width: 67.5rem) {
+    text-align: left;
+    justify-content: flex-start;
+  }
+}
+
+.hero--btn {
+  @media screen and (min-width: 67.5rem) {
+    text-align: left;
   }
 }

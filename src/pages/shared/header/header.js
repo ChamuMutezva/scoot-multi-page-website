@@ -11,7 +11,7 @@ const Header = (props) => {
                     <h1 className="hero__title">{props.title}</h1>
                     <p className="hero__content">{props.content}</p>
                     <div className="hero__btn__wrapper">
-                        <BtnScoot />
+                        <BtnScoot title="Get Scootin" heroWrapper={true} heroBtn={true} />
                     </div>
                 </div>
                 <span className="inner__img"></span>

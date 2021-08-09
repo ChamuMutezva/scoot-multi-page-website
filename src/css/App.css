@@ -451,6 +451,11 @@ body {
   }
 }
 
+.cards__secondary--btn {
+  margin: auto;
+  display: block;
+}
+
 .wrapper__scoot {
   margin: 0 auto;
 }
@@ -505,6 +510,19 @@ body {
 @media screen and (min-width: 38.75rem) {
   .wrapper__scoot--btn {
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 67.5rem) {
+  .scoot__hero__wrapper {
+    text-align: left;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 67.5rem) {
+  .hero--btn {
+    text-align: left;
   }
 }
 
@@ -607,6 +625,46 @@ body {
 }
 @media screen and (min-width: 38.75rem) {
   .card__content {
+    text-align: left;
+  }
+}
+
+.secondary__cards {
+  padding: 0 2rem;
+}
+
+.cards2 {
+  margin-bottom: 7.5rem;
+}
+
+.cards2__image {
+  max-width: 27.8125rem;
+  margin: auto;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.cards2__content__wrapper {
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cards2__title {
+  color: #495567;
+  font-size: 2rem;
+  font-family: "Space Mono", monospace;
+  letter-spacing: -1.43px;
+  line-height: 1.1;
+}
+
+.cards2__content {
+  font-size: 0.9375rem;
+  color: #939CAA;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 38.75rem) {
+  .cards2__content {
     text-align: left;
   }
 }

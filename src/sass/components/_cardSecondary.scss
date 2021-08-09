@@ -1,0 +1,40 @@
+@use '../base';
+
+.secondary__cards {
+  padding: 0 2rem;
+}
+
+.cards2 {
+	margin-bottom: 7.5rem;
+}
+
+.cards2__image {
+    max-width: 27.8125rem;
+    margin: auto;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.cards2__content__wrapper {
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cards2__title {
+  color: base.$mid-mid-grey;
+  font-size: base.calculateRem(32);
+  // margin-top: 1rem;
+  font-family: base.$secondary-font;
+  letter-spacing: -1.43px;
+  line-height: 1.1;
+}
+
+.cards2__content {
+  font-size: base.calculateRem(15);
+  color: base.$mid-lt-grey;
+  margin-top: 2rem;
+  @media screen and (min-width: 38.75rem) {
+    text-align: left;
+  }
+}
