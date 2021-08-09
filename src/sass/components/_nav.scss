@@ -5,10 +5,19 @@
   padding: 1.25rem;
   justify-content: flex-start;
   align-items: flex-end;
+  @media screen and (min-width: 38.75rem) {
+    padding: 1.55rem 2.4375rem;
+  }
 }
+
 .menu__control {
   position: relative;
+  z-index: 10;
+  @media screen and (min-width: 38.75rem) {
+    display: none;
+  }
 }
+
 .close__menu {
   position: absolute;
   top: 0;
@@ -18,17 +27,49 @@
 
 .logo__wrapper {
   margin: auto;
+  @media screen and (min-width: 38.75rem) {
+    flex: 1 1 20%;
+  }
 }
+
+/******  MODAL CONTAINER ***** */
 .modal__container {
-	display: none; //remove this
   position: absolute;
   top: 4rem;
   left: 0rem;
   width: 68%;
   background-color: base.$mid-grey;
-  // background: none; // to change this
-  height: 100vh;
+  height: 49vh;
   z-index: 1;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: space-between;
+
+  @media screen and (min-width: 38.75rem) {
+    background-color: inherit;
+    position: relative;
+    padding-top: 0;
+    top: 0;
+    height: auto;
+    width: max-content;
+    flex: 1 1 70%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/***  END MODAL CONTAINER ******/
+
+.hide__modal {
+  display: none;
+  @media screen and (min-width: 38.75rem) {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+  }
 }
 
 .show__menu,
@@ -39,43 +80,78 @@
 
 .nav__item--btn {
   color: white;
-  color: black; // to change this
+  outline: none;
+  text-decoration: none;
+  font-size: base.calculateRem(15);
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: dashed currentColor;
+    outline-offset: 0.25em;
+  }
+
+  @media screen and (min-width: 38.75rem) {
+    color: base.$mid-lt-grey;
+  }
+}
+
+.wrapper__scoot {
+  margin: 0 auto;
+  @media screen and (min-width: 38.75rem) {
+    flex: 1 1 45%;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 67.5rem) {
+    justify-content: flex-start;
+    margin-left: 3rem;
+  }
+}
+
+.navigation__items {
+  @media screen and (min-width: 38.75rem) {
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: space-between;
+  }
+}
+
+.nav__item {
+  margin-bottom: 1rem;
+  @media screen and (min-width: 38.75rem) {
+    margin-bottom: 0;
+  }
+}
+
+.logo--btn {
+  outline: none;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: dashed currentColor;
+    outline-offset: 0.25em;
+  }
 }
 
 .wrapper__scoot--btn {
   background-color: base.$yellow;
   border: none;
-}
+  font-size: base.calculateRem(15);
+  color: base.$white;
+  padding: 0.9rem 3rem;
+  margin-top: 1rem;
 
-@media screen and (min-width: 38.75rem) {
-  .menu__control {
-    display: none;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: dashed base.$mid-grey;
+    outline-offset: 0.25em;
   }
-  .modal__container {	
-    background-color: inherit;
-    position: relative;
-    top: 0;
-    height: auto;
-    width: max-content;
-    flex: 1 1 70%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-  }
-  .navigation__items {
-    display: flex;
-    flex: 1 1 50%;
-    justify-content: space-between;
-  }
-  .logo__wrapper {
-    flex: 1 1 20%;
-  }
-  .nav__item--btn {
-    color: base.$mid-lt-grey;
-  }
-  .wrapper__scoot {
-    flex: 1 1 15%;
-    text-align: right;
+  @media screen and (min-width: 38.75rem) {
+    margin-top: 0;
   }
 }
