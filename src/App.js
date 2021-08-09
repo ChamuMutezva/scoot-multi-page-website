@@ -1,10 +1,10 @@
 //import logo from './logo.svg';
 import { BrowserRouter as Router,  Switch,  Route,  /*Link*/} from "react-router-dom";
 import Navigation from './pages/shared/header/navigation'
-import MainAbout from './pages/about/main/main'
-import MainCareers from './pages/careers/main/main'
-import MainHome from './pages/home/main/main'
-import MainLocation from './pages/locations/main/main'
+import MainAbout from './pages/about/main/mainPage'
+import MainCareers from './pages/careers/main/mainPage'
+import MainHome from './pages/home/main/mainPage'
+import MainLocation from './pages/locations/main/mainPage'
 
 import './sass/App.scss';
 

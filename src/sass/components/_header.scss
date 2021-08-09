@@ -57,7 +57,7 @@
   }
 
   .inner__img {
-    padding-top: 110%;
+    padding-top: 76%;
   }
 
   .hero__content {
@@ -79,7 +79,7 @@
     height: 100%;
     background-image: url("../../assets/patterns/right-arrow.svg");
     background-repeat: no-repeat;
-    background-position: 0% 70%;
+    background-position: 0% 90%;
     background-size: 100%;
     top: 0;
     left: -62%;
@@ -99,19 +99,19 @@
     }
 
     .inner__img {
-      padding-top: 85%;
+      padding-top: 45%;
     }
 
     &::before {
       background-size: 50%;
-      background-position: 0% 60%;
+      // background-position: 0% 60%;
       left: 0%;
     }
 
     &::after {
       right: -1.4rem;
       top: 0;
-      background-position: 50% 60%;
+      background-position: 50% 90%;
     }
   }
 
@@ -119,7 +119,7 @@
     background-image: url("../../assets/images/home-hero-desktop.jpg");
 
     .inner__img {
-      padding-top: 45%;
+      padding-top: 23%;
     }
 
     .hero__wrapper {
@@ -134,7 +134,7 @@
       padding-left: 3rem;
       padding-right: 6rem;
       line-height: 1.7;
-      
+
       &::before {
         content: "";
         position: absolute;
@@ -155,7 +155,7 @@
 
     &::after {
       background-size: 65%;
-      background-position: 100% 45%;
+      background-position: 100% 72%;
     }
   }
 }
