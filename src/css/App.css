@@ -634,7 +634,31 @@ body {
 }
 
 .cards2 {
+  position: relative;
   margin-bottom: 7.5rem;
+}
+.cards2:first-child::before, .cards2:last-child::before, .cards2:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  top: 0;
+}
+.cards2:first-child::before, .cards2:last-child::before {
+  background-image: url("../../assets/patterns/left-downward-arrow.svg");
+  background-position: 0% 20%;
+  right: -2rem;
+}
+.cards2:last-child::before {
+  background-position: -25% 0%;
+  right: -2rem;
+}
+.cards2:nth-child(2)::before {
+  background-image: url("../../assets/patterns/right-arrow.svg");
+  background-position: 100% 0%;
+  left: -2rem;
 }
 
 .cards2__image {
