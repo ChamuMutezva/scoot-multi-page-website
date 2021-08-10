@@ -653,12 +653,23 @@ body {
 }
 .cards2:last-child::before {
   background-position: -25% 0%;
-  right: -2rem;
 }
 .cards2:nth-child(2)::before {
   background-image: url("../../assets/patterns/right-arrow.svg");
   background-position: 100% 0%;
   left: -2rem;
+}
+@media screen and (min-width: 38.75rem) {
+  .cards2:first-child::before {
+    background-position: 0% 50%;
+  }
+  .cards2:nth-child(2)::before {
+    background-position: -35% 0%;
+  }
+  .cards2:last-child::before {
+    background-position: -100% 0%;
+    background-size: 135% 30%;
+  }
 }
 
 .cards2__image {
