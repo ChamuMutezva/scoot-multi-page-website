@@ -10,8 +10,9 @@ const SecondaryCard = (props) => {
                 <p className="cards2__content">
                     {props.content}
                 </p>
+                <BtnScoot title="Learn more" secondaryBtn={true}/>
             </div>
-            <BtnScoot title="Learn more" secondaryBtn={true}/>
+            
         </div>
     )
 }
