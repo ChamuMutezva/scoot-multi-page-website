@@ -455,6 +455,11 @@ body {
   margin: auto;
   display: block;
 }
+@media screen and (min-width: 67.5rem) {
+  .cards__secondary--btn {
+    margin-left: 0;
+  }
+}
 
 .wrapper__scoot {
   margin: 0 auto;
@@ -468,6 +473,7 @@ body {
     align-items: center;
   }
 }
+
 @media screen and (min-width: 38.75rem) {
   .navigation__items {
     display: flex;
@@ -632,6 +638,11 @@ body {
 .secondary__cards {
   padding: 0 2rem;
 }
+@media screen and (min-width: 67.5rem) {
+  .secondary__cards {
+    padding: 2.5rem 0 0 0;
+  }
+}
 
 .cards2 {
   position: relative;
@@ -674,15 +685,42 @@ body {
 @media screen and (min-width: 67.5rem) {
   .cards2 {
     display: flex;
+    /*****  PSEUDO AFTER ALL 3 CARDS *****/
+    /***** END --------  PSEUDO AFTER ALL 3 CARDS -------- *****/
+  }
+  .cards2:first-child::after, .cards2:last-child::after, .cards2:nth-child(2)::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../assets/patterns/circle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    right: 0px;
+    top: 0;
   }
   .cards2:first-child, .cards2:last-child {
     flex-direction: row-reverse;
+    padding-left: 10.3125rem;
   }
   .cards2:first-child::before, .cards2:last-child::before {
     background-position: 100% 100%;
   }
+  .cards2:first-child::after, .cards2:last-child::after {
+    background-position: 140% 50%;
+  }
   .cards2:last-child::before {
     background-size: 40% 30%;
+  }
+  .cards2:nth-child(2) {
+    padding-right: 10.3125rem;
+  }
+  .cards2:nth-child(2)::before {
+    background-position: -10% 0%;
+  }
+  .cards2:nth-child(2)::after {
+    background-position: -35% 0%;
   }
 }
 
@@ -699,7 +737,9 @@ body {
 }
 @media screen and (min-width: 67.5rem) {
   .cards2__content__wrapper {
+    margin-top: 4rem;
     flex: 1 1 50%;
+    max-width: 27.8125rem;
   }
 }
 
@@ -717,6 +757,13 @@ body {
   letter-spacing: -1.43px;
   line-height: 1.1;
 }
+@media screen and (min-width: 67.5rem) {
+  .cards2__title {
+    text-align: left;
+    font-size: 3rem;
+    letter-spacing: -2.14px;
+  }
+}
 
 .cards2__content {
   font-size: 0.9375rem;
@@ -726,6 +773,11 @@ body {
 @media screen and (min-width: 38.75rem) {
   .cards2__content {
     text-align: left;
+  }
+}
+@media screen and (min-width: 68.5rem) {
+  .cards2__content {
+    margin-bottom: 3rem;
   }
 }
 

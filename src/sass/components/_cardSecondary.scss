@@ -2,6 +2,10 @@
 
 .secondary__cards {
   padding: 0 2rem;
+
+  @media screen and (min-width: 67.5rem) {
+    padding: 2.5rem 0 0 0;
+  }
 }
 
 .cards2 {
@@ -69,17 +73,52 @@
   @media screen and (min-width: 67.5rem) {
     display: flex;
 
+    /*****  PSEUDO AFTER ALL 3 CARDS *****/
+    &:first-child,
+    &:last-child,
+    &:nth-child(2) {
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url("../../assets/patterns/circle.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        right: 0px;
+        top: 0;
+      }
+    }
+
+    /***** END --------  PSEUDO AFTER ALL 3 CARDS -------- *****/
+
     &:first-child,
     &:last-child {
       flex-direction: row-reverse;
+      padding-left: 10.3125rem;
       &::before {
         background-position: 100% 100%;
+      }
+
+      &::after {
+        background-position: 140% 50%;
       }
     }
 
     &:last-child {
       &::before {
         background-size: 40% 30%;
+      }
+    }
+
+    &:nth-child(2) {
+      padding-right: 10.3125rem;
+      &::before {
+        background-position: -10% 0%;
+      }
+      &::after {
+        background-position: -35% 0%;
       }
     }
   }
@@ -95,8 +134,11 @@
   margin-top: 3rem;
   text-align: center;
   margin-bottom: 3rem;
+
   @media screen and (min-width: 67.5rem) {
+    margin-top: 4rem;
     flex: 1 1 50%;
+    max-width: 27.8125rem;
   }
 }
 
@@ -114,6 +156,12 @@
   font-family: base.$secondary-font;
   letter-spacing: -1.43px;
   line-height: 1.1;
+
+  @media screen and (min-width: 67.5rem) {
+    text-align: left;
+    font-size: base.calculateRem(48);
+    letter-spacing: -2.14px;
+  }
 }
 
 .cards2__content {
@@ -122,5 +170,8 @@
   margin-top: 2rem;
   @media screen and (min-width: 38.75rem) {
     text-align: left;
+  }
+  @media screen and (min-width: 68.5rem) {
+    margin-bottom: 3rem;
   }
 }
