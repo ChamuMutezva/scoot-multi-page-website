@@ -1,0 +1,20 @@
+@use '../base';
+.aside {
+  background-color: base.$mid-mid-grey;
+  background-image: url("../../assets/patterns/semi-circles.svg");
+  background-repeat: no-repeat;
+  padding: 3rem;
+  color: base.$white;
+}
+.aside__deco {
+  max-width: 25rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+.google,
+.apple {
+}

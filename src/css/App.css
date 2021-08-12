@@ -781,6 +781,24 @@ body {
   }
 }
 
+.aside {
+  background-color: #495567;
+  background-image: url("../../assets/patterns/semi-circles.svg");
+  background-repeat: no-repeat;
+  padding: 3rem;
+  color: #ffffff;
+}
+
+.aside__deco {
+  max-width: 25rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
 .App {
   overflow-x: hidden;
 }

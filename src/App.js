@@ -1,10 +1,11 @@
 //import logo from './logo.svg';
-import { BrowserRouter as Router,  Switch,  Route,  /*Link*/} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route,  /*Link*/ } from "react-router-dom";
 import Navigation from './pages/shared/header/navigation'
 import MainAbout from './pages/about/main/mainPage'
 import MainCareers from './pages/careers/main/mainPage'
 import MainHome from './pages/home/main/mainPage'
 import MainLocation from './pages/locations/main/mainPage'
+import Aside from "./pages/shared/aside/aside";
 
 import './sass/App.scss';
 
@@ -28,6 +29,7 @@ function App() {
             <MainLocation />
           </Route>
         </Switch>
+        <Aside />
       </Router>
     </div>
   );
