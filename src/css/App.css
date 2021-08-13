@@ -794,6 +794,8 @@ body {
   background-repeat: no-repeat;
   padding: 3rem 1.5rem;
   color: #ffffff;
+  background-position: 80% 100%;
+  background-size: auto;
 }
 
 .aside__deco {
