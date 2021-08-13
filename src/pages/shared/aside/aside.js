@@ -2,14 +2,22 @@ import Apple from '../../../assets/icons/app-store.svg'
 import Google from '../../../assets/icons/google-play.svg'
 const Aside = () => {
     return (
-        <aside className="aside">
+        <aside className="aside" role="contentinfo">
             <h2>
                 Sign up and Scoot off today
             </h2>
-            <div className="aside__deco">
-                <img className="google" src={Google} alt="" />
-                <img className="apple" src={Apple} alt="" />
-            </div>
+            <ul className="aside__deco">
+                <li>
+                    <a className="aside__deco--btn" href="/" aria-label="download it on google play">
+                        <img className="google" src={Google} alt="" aria-hidden={true} />
+                    </a>
+                </li>
+                <li>
+                    <a className="aside__deco--btn" href="/" aria-label="download it on apple store">
+                        <img className="apple" src={Apple} alt="" aria-hidden={true} />
+                    </a>
+                </li>
+            </ul>
         </aside>
     )
 }

@@ -38,7 +38,7 @@ const Navigation = () => {
 
             {/*Modal and navigation list items*/}
             <div className={`modal__container ${menu ? "hide__modal" : ""} `}>
-                <NavList />
+                <NavList click={handleClick}/>
                 <BtnScoot title="Get Scootin"/>
             </div>
             {/* ---------------------------------*/}

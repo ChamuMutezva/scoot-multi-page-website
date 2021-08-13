@@ -76,6 +76,13 @@
 .close__menu {
   border: none;
   background: none;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: dashed currentColor;
+    outline-offset: 0.25em;
+  }
 }
 
 .nav__item--btn {
@@ -97,16 +104,6 @@
 
 
 
-.cards__secondary--btn {
-  margin: auto;
-  display: block;
-
-  @media screen and (min-width: 67.5rem) {
-    margin-left: 0;
-   // margin-top: 1rem;
-  }
-}
-
 .wrapper__scoot {
   margin: 0 auto;
   @media screen and (min-width: 38.75rem) {
@@ -116,8 +113,6 @@
     justify-content: center;
     align-items: center;
   }
-
- 
 }
 
 .navigation__items {
@@ -162,6 +157,16 @@
 
   @media screen and (min-width: 38.75rem) {
     margin-top: 0;
+  }
+}
+
+.cards__secondary--btn {
+  margin: 3rem auto 0;
+  display: block;
+
+  @media screen and (min-width: 67.5rem) {
+    margin-left: 0;
+    // margin-top: 1rem;
   }
 }
 

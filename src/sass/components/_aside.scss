@@ -3,7 +3,7 @@
   background-color: base.$mid-mid-grey;
   background-image: url("../../assets/patterns/semi-circles.svg");
   background-repeat: no-repeat;
-  padding: 3rem;
+  padding: 3rem 1.5rem;
   color: base.$white;
 }
 .aside__deco {
@@ -17,4 +17,14 @@
 }
 .google,
 .apple {
+  width: 100%;
+}
+
+.aside__deco--btn {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: dashed currentColor;
+    outline-offset: 0.25em;
+  }
 }

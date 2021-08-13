@@ -433,6 +433,13 @@ body {
   border: none;
   background: none;
 }
+.show__menu:hover, .show__menu:focus,
+.close__menu:hover,
+.close__menu:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
+}
 
 .nav__item--btn {
   color: white;
@@ -448,16 +455,6 @@ body {
 @media screen and (min-width: 38.75rem) {
   .nav__item--btn {
     color: #939CAA;
-  }
-}
-
-.cards__secondary--btn {
-  margin: auto;
-  display: block;
-}
-@media screen and (min-width: 67.5rem) {
-  .cards__secondary--btn {
-    margin-left: 0;
   }
 }
 
@@ -516,6 +513,16 @@ body {
 @media screen and (min-width: 38.75rem) {
   .wrapper__scoot--btn {
     margin-top: 0;
+  }
+}
+
+.cards__secondary--btn {
+  margin: 3rem auto 0;
+  display: block;
+}
+@media screen and (min-width: 67.5rem) {
+  .cards__secondary--btn {
+    margin-left: 0;
   }
 }
 
@@ -785,7 +792,7 @@ body {
   background-color: #495567;
   background-image: url("../../assets/patterns/semi-circles.svg");
   background-repeat: no-repeat;
-  padding: 3rem;
+  padding: 3rem 1.5rem;
   color: #ffffff;
 }
 
@@ -797,6 +804,17 @@ body {
   padding: 0;
   margin: 0;
   gap: 1rem;
+}
+
+.google,
+.apple {
+  width: 100%;
+}
+
+.aside__deco--btn:hover, .aside__deco--btn:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
 }
 
 .App {

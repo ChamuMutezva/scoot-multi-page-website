@@ -6,6 +6,7 @@ import MainCareers from './pages/careers/main/mainPage'
 import MainHome from './pages/home/main/mainPage'
 import MainLocation from './pages/locations/main/mainPage'
 import Aside from "./pages/shared/aside/aside";
+import Footer from "./pages/shared/footer/footer";
 
 import './sass/App.scss';
 
@@ -30,6 +31,7 @@ function App() {
           </Route>
         </Switch>
         <Aside />
+        <Footer />
       </Router>
     </div>
   );
