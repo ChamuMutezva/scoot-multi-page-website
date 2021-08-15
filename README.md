@@ -91,6 +91,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
+- [accessibility](https://a11y-101.com/development/icons-and-links) - making anchor list accessible when there is a decorative element. Use a span that is visually hidden but can be read by screen readers.
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 

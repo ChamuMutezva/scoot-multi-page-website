@@ -3,7 +3,7 @@ import Google from '../../../assets/icons/google-play.svg'
 const Aside = () => {
     return (
         <aside className="aside" role="contentinfo">
-            <h2>
+            <h2 className="aside__title">
                 Sign up and Scoot off today
             </h2>
             <ul className="aside__deco">
