@@ -801,6 +801,34 @@ body {
   }
 }
 
+/* ABOUT PAGE - SECONDARY SECTION - CARDS
+The home page has three cards and this (about) page has 2 cards
+On the home page the images of the first and third(last) card where on
+the same side but the logic used affected this (about) page which has 2 cards.
+The last (second) card image was supposed to stay on the opposite  side  of the
+first card but now that has been cancelled as it has taken the styles of the last child
+To overide - solution below was used.
+*/
+@media screen and (min-width: 38.75rem) {
+  .secondary__cards__about .cards2:last-child::before {
+    background-position: 100% 6%;
+    background-size: contain;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .secondary__cards__about .cards2:last-child {
+    flex-direction: row;
+  }
+  .secondary__cards__about .cards2:last-child::before {
+    width: 40%;
+  }
+}
+
+.learn__hide--btn {
+  display: none;
+}
+
 .aside {
   background-color: #495567;
   background-image: url("../../assets/patterns/semi-circles.svg");

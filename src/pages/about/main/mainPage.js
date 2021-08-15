@@ -1,7 +1,11 @@
 import Header from '../../shared/header/header'
+import Main from './main'
 const MainAbout = () => {
     return(
-        <Header title="About" about={true}/>
+        <div>
+            <Header title="About" about={true}/>
+            <Main />
+        </div>
     )
 }
 export default MainAbout

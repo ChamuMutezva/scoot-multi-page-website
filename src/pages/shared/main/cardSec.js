@@ -1,5 +1,6 @@
 import BtnScoot from '../../shared/header/BtnScoot'
 const SecondaryCard = (props) => {
+    const hideBtn = props.learnBtnHide ? "learn__hide--btn" : ""
     return (
         <div className="cards2">
             <div className="cards2__image__wrapper">
@@ -10,7 +11,9 @@ const SecondaryCard = (props) => {
                 <p className="cards2__content">
                     {props.content}
                 </p>
-                <BtnScoot title="Learn more" secondaryBtn={true}/>
+                <div className={`secondary__show--btn ${hideBtn}`}>
+                    <BtnScoot title="Learn more" secondaryBtn={true}/>
+                </div>
             </div>
             
         </div>
