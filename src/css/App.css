@@ -264,14 +264,11 @@ body {
   .hero__about {
     background-image: url("../../assets/images/about-hero-tablet.jpg");
   }
-  .hero__about .inner__img {
-    padding-top: 85%;
-  }
   .hero__about::after {
     top: 0;
     right: -1.4rem;
     height: 29%;
-    background-position: 0% 50%;
+    background-position: 0% 100%;
   }
 }
 @media screen and (min-width: 67.5rem) {
@@ -317,16 +314,12 @@ body {
 .hero__location {
     background-image: url("../../assets/images/careers-locations-hero-tablet.jpg");
   }
-  .hero__careers .inner__img,
-.hero__location .inner__img {
-    padding-top: 85%;
-  }
   .hero__careers::after,
 .hero__location::after {
     top: 0;
     right: -1.4rem;
     height: 29%;
-    background-position: 0% 50%;
+    background-position: 0% 100%;
   }
 }
 @media screen and (min-width: 67.5rem) {
@@ -623,7 +616,7 @@ body {
 .card__img {
   display: block;
   margin: auto;
-  width: 19%;
+  border-radius: 50%;
 }
 @media screen and (min-width: 38.75rem) {
   .card__img {
@@ -633,6 +626,21 @@ body {
 }
 @media screen and (min-width: 67.5rem) {
   .card__img {
+    margin-left: 0;
+  }
+}
+
+.small__card {
+  width: 19%;
+}
+@media screen and (min-width: 38.75rem) {
+  .small__card {
+    width: 100%;
+    max-width: 6rem;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .small__card {
     margin-left: 0;
   }
 }
@@ -655,6 +663,59 @@ body {
   }
 }
 
+.primary__title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Space Mono", monospace;
+  color: #495567;
+  font-weight: 700;
+  letter-spacing: -1.43px;
+}
+
+.large__card__wrapper {
+  margin-bottom: 5rem;
+  margin-top: -2.5rem;
+  position: relative;
+}
+.large__card__wrapper::before {
+  position: absolute;
+  content: "01";
+  width: 6rem;
+  height: 6rem;
+  background-color: #FCB72B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  bottom: -3rem;
+  left: 50%;
+  margin-left: -3rem;
+}
+@media screen and (min-width: 38.75rem) {
+  .large__card__wrapper::before {
+    top: 80%;
+    z-index: 1;
+  }
+}
+
+/*----------------OVERIDING ABOUT PAGE---------------*/
+@media screen and (min-width: 38.75rem) {
+  .large__card {
+    max-width: 15rem;
+  }
+}
+
+@media screen and (min-width: 38.75rem) {
+  .card__about {
+    display: block;
+  }
+  .card__about .card__splitter {
+    /* justify-content: center; */
+    align-items: center;
+  }
+}
+
+/*----------------END OVERIDING ABOUT PAGE---------------*/
 .secondary__cards {
   padding: 0 2rem;
 }
@@ -691,15 +752,34 @@ body {
   left: -2rem;
 }
 @media screen and (min-width: 38.75rem) {
+  .cards2 {
+    /*****  PSEUDO AFTER ALL 3 CARDS *****/
+    /***** END --------  PSEUDO AFTER ALL 3 CARDS -------- *****/
+  }
   .cards2:first-child::before {
     background-position: 0% 50%;
-  }
-  .cards2:nth-child(2)::before {
-    background-position: -35% 0%;
   }
   .cards2:last-child::before {
     background-position: -100% 0%;
     background-size: 135% 30%;
+  }
+  .cards2:first-child::after, .cards2:last-child::after, .cards2:nth-child(2)::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../assets/patterns/circle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 50%;
+    z-index: -1;
+    right: -40%;
+    top: 5%;
+  }
+  .cards2:nth-child(2)::before {
+    background-position: -35% 0%;
+  }
+  .cards2:nth-child(2)::after {
+    right: 85%;
   }
 }
 @media screen and (min-width: 67.5rem) {
@@ -709,14 +789,8 @@ body {
     /***** END --------  PSEUDO AFTER ALL 3 CARDS -------- *****/
   }
   .cards2:first-child::after, .cards2:last-child::after, .cards2:nth-child(2)::after {
-    position: absolute;
-    content: "";
-    background-image: url("../../assets/patterns/circle.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 100%;
     height: 100%;
-    z-index: -1;
     right: 0px;
     top: 0;
   }
@@ -946,4 +1020,8 @@ To overide - solution below was used.
 
 .App {
   overflow-x: hidden;
+}
+
+.main__about {
+  margin-top: 1.2rem;
 }

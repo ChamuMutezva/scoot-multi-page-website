@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use '../base';
 
 .cards {
@@ -27,7 +28,6 @@
 
   @media screen and (min-width: 67.5rem) {
     flex-direction: column;
-
   }
 }
 
@@ -59,10 +59,10 @@
 
   @media screen and (min-width: 67.5rem) {
     &::before {
-        width: 100%;
-        height: 1rem;
-        left: -94%;
-        top: 33%;
+      width: 100%;
+      height: 1rem;
+      left: -94%;
+      top: 33%;
     }
   }
 }
@@ -70,6 +70,17 @@
 .card__img {
   display: block;
   margin: auto;
+  border-radius: 50%;
+  @media screen and (min-width: 38.75rem) {
+    width: 100%;
+    max-width: 6rem;
+  }
+
+  @media screen and (min-width: 67.5rem) {
+    margin-left: 0;
+  }
+}
+.small__card {
   width: 19%;
   @media screen and (min-width: 38.75rem) {
     width: 100%;
@@ -96,3 +107,58 @@
     text-align: left;
   }
 }
+
+.primary__title {
+  text-align: center;
+  font-size: base.calculateRem(32);
+  font-family: base.$secondary-font;
+  color: base.$mid-mid-grey;
+  font-weight: 700;
+  letter-spacing: -1.43px;
+}
+
+.large__card__wrapper {
+  margin-bottom: 5rem;
+  margin-top: -2.5rem;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "01";
+    width: 6rem;
+    height: 6rem;
+    background-color: base.$yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    bottom: -3rem;
+    left: 50%;
+    margin-left: -3rem;
+  }
+
+  @media screen and (min-width: 38.75rem) {
+    &::before {
+      top: 80%;
+      z-index: 1;
+    }
+  }
+}
+
+/*----------------OVERIDING ABOUT PAGE---------------*/
+.large__card {
+  @media screen and (min-width: 38.75rem) {
+    max-width: 15rem;
+  }
+}
+
+.card__about {
+  @media screen and (min-width: 38.75rem) {
+    display: block;
+
+    .card__splitter {
+      /* justify-content: center; */
+      align-items: center;
+    }
+  }
+}
+/*----------------END OVERIDING ABOUT PAGE---------------*/

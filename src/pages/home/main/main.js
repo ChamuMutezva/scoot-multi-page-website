@@ -12,19 +12,22 @@ import Payments from '../../../assets/images/payments.jpg'
 
 const Main = () => {
     return (
-        <main>
+        <main className="main main__home">
             <section className="primary" role="contentinfo" aria-label="Steps to taken to successfully benefit from scoot">
                 <h2 className="primary__title sr-only">How the application works?</h2>
                 <div className="cards">
 
                     <Card src={Locate} title="Locate with app"
+                        smallCard={true}
                         content="Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away." />
 
                     <Card src={Ride} title="Pick your scooter"
+                        smallCard={true}
                         content="We show the most important info for the scooters closest to you.So you know how much
                             charge they have left and can see roughly how much it will cost." />
 
                     <Card src={Scooter} title="Enjoy the ride"
+                        smallCard={true}
                         content="Scan the QR code and the bike will unlock.Retract the cable lock, put on a helmet,
                             and you’re off! Always lock bikes away from walkways and accessibility ramps." />
 

@@ -54,13 +54,7 @@
       &::before {
         background-position: 0% 50%;
       }
-    }
-
-    &:nth-child(2) {
-      &::before {
-        background-position: -35% 0%;
-      }
-    }
+    }   
 
     &:last-child {
       &::before {
@@ -68,10 +62,6 @@
         background-size: 135% 30%;
       }
     }
-  }
-
-  @media screen and (min-width: 67.5rem) {
-    display: flex;
 
     /*****  PSEUDO AFTER ALL 3 CARDS *****/
     &:first-child,
@@ -83,9 +73,44 @@
         background-image: url("../../assets/patterns/circle.svg");
         background-repeat: no-repeat;
         background-size: contain;
+        width: 50%;
+        height: 50%;
+        z-index: -1;
+        right: -40%;
+        top: 5%;
+      }
+    }
+
+    /***** END --------  PSEUDO AFTER ALL 3 CARDS -------- *****/
+
+    &:nth-child(2) {
+      &::before {
+        background-position: -35% 0%;
+      }
+
+      &::after {
+        right: 85%;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 67.5rem) {
+    display: flex;
+
+    /*****  PSEUDO AFTER ALL 3 CARDS *****/
+    &:first-child,
+    &:last-child,
+    &:nth-child(2) {
+      &::after {
+       // position: absolute;
+       // content: "";
+      //  background-image: url("../../assets/patterns/circle.svg");
+      //  background-repeat: no-repeat;
+      //  background-size: contain;
         width: 100%;
         height: 100%;
-        z-index: -1;
+      //  z-index: -1;
         right: 0px;
         top: 0;
       }
