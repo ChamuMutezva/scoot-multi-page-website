@@ -1,7 +1,11 @@
+import Main from '../main/main.js'
 import Header from '../../shared/header/header'
 const MainCareers = () => {
     return(
-        <Header title="Careers" careers={true}/>
+        <div>
+            <Header title="Careers" careers={true}/>
+            <Main />
+        </div>
     )
 }
     
