@@ -8,8 +8,12 @@ const Header = (props) => {
         <header>
             <div className={`hero ${heroHome} ${heroAbout} ${heroLocation} ${heroCareers}`}>
                 <div className="hero__wrapper">
-                    <h1 className="hero__title">{props.title}</h1>
-                    <p className="hero__content">{props.content}</p>
+                    <h1 className="hero__title">
+                        {props.title}
+                    </h1>
+                    <p className="hero__content">
+                        {props.content}
+                    </p>
                     <div className="hero__btn__wrapper">
                         <BtnScoot title="Get Scootin" heroWrapper={true} heroBtn={true} />
                     </div>

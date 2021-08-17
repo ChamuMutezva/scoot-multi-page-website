@@ -38,17 +38,26 @@ const Main = () => {
             <section className="secondary" role="contentinfo" aria-label="advantages of using scoot">
                 <h2 className="secondary__title sr-only">The benefits of using scoot</h2>
                 <div className="secondary__cards">
-                    <SecondaryCard src={Telementry} alt="a man enjoying using the scoot application on his mobile phone" title="Easy to use riding telemetry"
+                    <SecondaryCard src={Telementry}
+                        alt="a man enjoying using the scoot application on his mobile phone"
+                        title="Easy to use riding telemetry"
+                        btnTitle="Learn more"
                         content="The Scoot app is available with riding telemetry. This means it can show you your
                     average speed, how long you've been using the scooter, your traveling distance,
                     and many more things all in an easy to use app."/>
 
-                    <SecondaryCard src={NearYou} alt="riding through the busy cities made easy with scoot" title="Coming to a city near you"
+                    <SecondaryCard src={NearYou}
+                        alt="riding through the busy cities made easy with scoot"
+                        title="Coming to a city near you"
+                        btnTitle="Learn more"
                         content="Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure 
                     to let us know if you want to see us in your hometown. We’re aiming to let our 
                     scooters loose on 23 cities over the coming year."/>
 
-                    <SecondaryCard src={Payments} alt="a satisfied customer paying for scoot services using cash" title="Zero hassle payments"
+                    <SecondaryCard src={Payments}
+                        alt="a satisfied customer paying for scoot services using cash"
+                        title="Zero hassle payments"
+                        btnTitle="Learn more"
                         content="Our payment is as easy as one two three. We accept most credit cards and debit cards. 
                     You can also link your PayPal account inside the app. Need to pay later? No worries! 
                     You can defer payment for up to a month."/>
