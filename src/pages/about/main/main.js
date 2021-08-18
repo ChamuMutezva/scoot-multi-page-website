@@ -14,27 +14,96 @@ const Main = () => {
 
     //  const [show, setShow] = useState(false)
 
+
     const handleSubmit = (evt) => {
         const btn = evt.target
+        const attr = btn.getAttribute("aria-expanded");
+        console.log(attr)
         btn.classList.toggle("collapsed")
-        const targetData = evt.target.dataset.bsTarget
+
+
+        //  btn.setAttribute("aria-expanded", "true")
+        const targetData = evt.target.dataset.bsTarget //get the target element by using the dataset - pointing
+        // to id of target element
+        const targetElement = document.querySelector(targetData)
+        // const targetDataId = targetData.substring(1) //get the id of the clicked element
+        targetElement.classList.toggle("show")
+
+
+        if (attr === "false") {
+            btn.setAttribute("aria-expanded", "true")
+        } else {
+            btn.setAttribute("aria-expanded", "false")
+        }
+        /* get all buttons
+        const btns = Array.from(document.querySelectorAll(".accordion-button"))
+        btns.forEach(elm => {
+            if (btn === elm) {
+                elm.setAttribute("aria-expanded", "true")
+            } else {
+                elm.setAttribute("aria-expanded", "false")
+            }
+        })*/
+
+        /* get all targets elements in the accordion
+        const allTargets = Array.from(document.querySelectorAll(".accordion-collapse"))
+        // const targetDataId = targetData.substring(1) //get the id of the clicked element
+        console.log(allTargets)       
+        allTargets.forEach(elm => {
+            if (targetElement === elm) {
+                elm.classList.toggle("show")
+            } else {
+                elm.classList.remove("show")
+            }
+
+        })
+
+        */
+    }
+
+    const handleSubmit2 = (evt) => {
+        const btn = evt.target
+        btn.classList.toggle("collapsed")
+        const attr = btn.getAttribute("aria-expanded");
+        //  btn.setAttribute("aria-expanded", "true")
+        const targetData = evt.target.dataset.bsTarget //get the target element by using the dataset - pointing
+        // to id of target element
         const targetElement = document.querySelector(targetData)
 
         targetElement.classList.toggle("show")
-        // get all targets elements in the accordion
-        const allTargets = Array.from(document.querySelectorAll(".accordion-collapse"))
-        const targetDataId = targetData.substring(1) //get the id of the clicked element
-        console.log(allTargets)
-        console.log(targetDataId)
-        /*  allTargets.forEach(elm => {
-              console.log(elm.id)
-              if (elm.id === targetDataId) {
-                  elm.classList.toggle("show")
-              } else {
-                  elm.classList.remove("show")
-              }
-          })*/
+
+
+        if (attr === "false") {
+            btn.setAttribute("aria-expanded", "true")
+        } else {
+            btn.setAttribute("aria-expanded", "false")
+        }
+        /* get all buttons
+        const btns = Array.from(document.querySelectorAll(".accordion-button2"))
+        btns.forEach(elm => {
+            if (btn === elm) {
+                elm.setAttribute("aria-expanded", "true")
+            } else {
+                elm.setAttribute("aria-expanded", "false")
+            }
+        })
+        */
+        /*get all targets elements in the accordion
+        const allTargets = Array.from(document.querySelectorAll(".accordion-collapse2"))
+         const targetDataId = targetData.substring(1) //get the id of the clicked element
+        console.log(allTargets)       
+        allTargets.forEach(elm => {
+            if (targetElement === elm) {
+                elm.classList.toggle("show")
+            } else {
+                elm.classList.remove("show")
+            }
+
+        })*/
     }
+
+
+
     return (
         <main className="main main__about">
             <section className="secondary"
@@ -87,16 +156,23 @@ const Main = () => {
 
             </section>
 
-            <section className="accordion__section">
+            {/****************** FAQS ACCORDION *******
+             ********************STARTING POINT*******/}
+
+            <section className="accordion__section accordion__one">
                 <h2 className="accordion__section__heading">
                     faqs
                 </h2>
+
+                {/****************** FIRST ACCORDION *******
+             ********************STARTING POINT*******/}
+
                 <div className="accordion__wrapper">
                     <div className="accordion__title__wrapper">
                         <h3 className="accordion__title">How it works</h3>
                     </div>
                     <div className="accordion" id="accordionExample">
-                        {/*ACCORDION ITEM ONE */}
+                        {/*ACCORDION ITEM ONE OF 1 */}
                         <div className="accordion-item">
                             <h4 className="accordion-header" id="headingOne">
                                 <button className="accordion-button"
@@ -115,9 +191,9 @@ const Main = () => {
                                 </div>
                             </div>
                         </div>
-                        {/********* ACCORDION ITEM ONE END******** */}
+                        {/********* ACCORDION ITEM ONE OF 1 END******** */}
 
-                        {/*ACCORDION ITEM TWO */}
+                        {/*ACCORDION ITEM TWO OF 1*/}
                         <div className="accordion-item">
                             <h4 className="accordion-header" id="headingTwo">
 
@@ -134,9 +210,9 @@ const Main = () => {
                                 </div>
                             </div>
                         </div>
-                        {/***************ACCORDION ITEM TWO END*************** */}
+                        {/***************ACCORDION ITEM TWO OF 1 END*************** */}
 
-                        {/*ACCORDION ITEM THREE */}
+                        {/*ACCORDION ITEM THREE OF 1 */}
                         <div className="accordion-item">
                             <h4 className="accordion-header" id="headingThree">
                                 <button className="accordion-button collapsed"
@@ -152,24 +228,90 @@ const Main = () => {
                                 </div>
                             </div>
                         </div>
-                        {/************ACCORDION ITEM THREE END********* */}
+                        {/************ACCORDION ITEM THREE OF 1 END********* */}
                     </div>
                 </div>
+                {/****************** FIRST ACCORDION *******
+             ********************ENDING POINT*******/}
+
+                {/******************THE SECOND ACCORDION *******
+             ********************STARTING POINT ACCORDION NUMBER 2 *******/}
+
+                <div className="accordion__wrapper accordion__wrapper2">
+                    <div className="accordion__title__wrapper">
+                        <h3 className="accordion__title">Safe driving</h3>
+                    </div>
+                    <div className="accordion" id="accordionExample">
+                        {/*ACCORDION ITEM ONE OF 2 */}
+                        <div className="accordion-item">
+                            <h4 className="accordion-header" id="headingFive">
+                                <button className="accordion-button accordion-button2"
+                                    onClick={handleSubmit2}
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    Should I wear a helmet?
+                                </button>
+                            </h4>
+
+                            <div id="collapseFive" className="accordion-collapse accordion-collapse2 collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div className="accordion-body">
+                                    Yes, please do! All cities have different laws. But we strongly strongly strongly recommend
+                                    always wearing a helmet regardless of the local laws. We like you and we want you to be as
+                                    safe as possible while Scooting.
+                                </div>
+                            </div>
+                        </div>
+                        {/********* ACCORDION ITEM ONE OF 2 END******** */}
+
+                        {/*ACCORDION ITEM TWO OF 2*/}
+                        <div className="accordion-item">
+                            <h4 className="accordion-header" id="headingSix">
+
+                                <button className="accordion-button accordion-button2 collapsed"
+                                    onClick={handleSubmit2} type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    How about the rules &amp; regulations?
+                                </button>
+                            </h4>
+
+                            <div id="collapseSix" className="accordion-collapse accordion-collapse2 collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div className="accordion-body">
+                                    Now is not the time to be a rule breaker. Be sure you're complying with all local laws and
+                                    regulations. Also, just be a good human being. Be sure not to park your Scoot where it can
+                                    block access to buildings or get in people's way.
+                                </div>
+                            </div>
+                        </div>
+                        {/***************ACCORDION ITEM TWO OF 2 END*************** */}
+
+                        {/*ACCORDION ITEM THREE OF 2 */}
+                        <div className="accordion-item">
+                            <h4 className="accordion-header" id="headingSeven">
+                                <button className="accordion-button accordion-button2 collapsed"
+                                    onClick={handleSubmit2} type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    What if I damage my Scoot?
+                                </button>
+                            </h4>
+
+                            <div id="collapseSeven" className="accordion-collapse accordion-collapse2 collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div className="accordion-body">
+                                    Be sure to read our terms and conditions carefully. Not the most fun job we know but we make
+                                    it as clear as possible. There's an option to add insurance for each trip, or you can sign
+                                    up for annual insurance if you're a regular Scooter.
+                                </div>
+                            </div>
+                        </div>
+                        {/************ACCORDION ITEM THREE OF 2 END********* */}
+                    </div>
+                </div>
+
+
+                {/****************** THE SECOND ACCORDION *******
+             ********************ENDING POINT*******/}
             </section>
+            {/****************** FAQS ACCORDION *******
+             ********************ENDING POINT*******/}
         </main>
     )
 }
 export default Main
-
-
-
-
-
-
-
-
-
-
-
-
 

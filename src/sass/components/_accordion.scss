@@ -1,5 +1,33 @@
 @use '../base';
 
+.accordion__section {
+	margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.accordion__title {
+	text-align: center;
+    font-family: base.$secondary-font;
+    font-size: base.calculateRem(24);
+    color: base.$mid-mid-grey;
+    font-weight: 900;
+}
+
+.accordion__title__wrapper {
+	margin-top: .5rem;
+}
+
+.accordion {
+	margin-top: 1.8rem;
+}
+
+.accordion__section__heading {
+	text-align: center;
+    font-family: base.$secondary-font;
+    font-size: base.calculateRem(32);
+    color: base.$mid-mid-grey;
+    font-weight: 900;
+}
 
 .accordion__wrapper {
   padding: 2rem;
@@ -11,14 +39,22 @@
   border-top-right-radius: 0.25rem;
 }
 
-.accordion-item {
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+.accordion-item { 
+  border: 1px solid base.$grey-accordion;
+  background-color: base.$grey-accordion;
+  padding: 1rem 2rem 2rem;
+  margin-bottom: 1rem;
 
   &:first-of-type {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
   }
+}
+
+.accordion-body {
+    font-size: base.calculateRem(15);
+    line-height: 1.75;
+    color: base.$mid-mid-grey;
 }
 
 
@@ -29,11 +65,11 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1rem 1.25rem;
-  font-size: 1rem;
+  padding: 1rem 0;
+  font-size: base.calculateRem(18);
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: base.$grey-accordion;
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
@@ -55,8 +91,8 @@
 
   &:not(.collapsed) {
     color: #0c63e4;
-    background-color: #e7f1ff;
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+    background-color: base.$grey-accordion;
+   // box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
   }
 
   &:not(.collapsed)::after {
@@ -93,39 +129,3 @@ button:focus:not(:focus-visible) {
   outline: 0;
 }
 
-/*edit here
-.accordion-button {
-    position: relative;
-    display: flex;
-    width: 100%;
-   
-    font-size: 1.5rem;
-    align-items: center;
-    justify-content: space-between;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease;
-    background-color: inherit;
-    border: none;
-    cursor: pointer;
-    color: #212529;
-    text-align: left;
-    align-items: baseline;
-
-    &::after {
-       
-        content: "";
-        background-image: url("../../assets/icons/chevron.svg");
-        width: 1.25rem;
-        height: 1.25rem;
-        background-repeat: no-repeat;
-        flex-shrink: 0;
-        transition: transform .2s ease-in-out;
-    }
-
-
-    &:not(.collapsed)::after {
-        background-image: url("../../assets/icons/chevron.svg");
-        transform: rotate(-180deg);
-    }
-
-}
-*/
