@@ -651,6 +651,11 @@ body {
   margin-top: 1rem;
   font-family: "Space Mono", monospace;
 }
+@media screen and (min-width: 38.75rem) {
+  .card__title {
+    font-size: 1.5rem;
+  }
+}
 
 .card__content {
   font-size: 0.9375rem;
@@ -671,11 +676,25 @@ body {
   font-weight: 700;
   letter-spacing: -1.43px;
 }
+@media screen and (min-width: 38.75rem) {
+  .primary__title {
+    font-size: 3rem;
+  }
+}
 
 .large__card__wrapper {
   margin-bottom: 5rem;
   margin-top: -2.5rem;
   position: relative;
+  /*
+    &:nth-child(2)::before {
+      content: "02";
+    }
+
+    &:last-child::before {
+      content: "03";
+    }
+    */
 }
 .large__card__wrapper::before {
   position: absolute;
@@ -710,8 +729,16 @@ body {
     display: block;
   }
   .card__about .card__splitter {
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
+    max-width: 28.5625rem;
+    margin: auto;
+  }
+  .card__about .card__content {
+    text-align: center;
+  }
+  .card__about .card__title {
+    margin-top: 2rem;
   }
 }
 
@@ -829,6 +856,12 @@ body {
   text-align: center;
   margin-bottom: 3rem;
 }
+@media screen and (min-width: 38.75rem) {
+  .cards2__content__wrapper {
+    max-width: 35.8125rem;
+    margin: 3rem auto;
+  }
+}
 @media screen and (min-width: 67.5rem) {
   .cards2__content__wrapper {
     margin-top: 4rem;
@@ -851,10 +884,16 @@ body {
   letter-spacing: -1.43px;
   line-height: 1.1;
 }
+@media screen and (min-width: 38.75rem) {
+  .cards2__title {
+    font-size: 3rem;
+    max-width: 28.5625rem;
+    margin: auto;
+  }
+}
 @media screen and (min-width: 67.5rem) {
   .cards2__title {
     text-align: left;
-    font-size: 3rem;
     letter-spacing: -2.14px;
   }
 }
@@ -866,7 +905,7 @@ body {
 }
 @media screen and (min-width: 38.75rem) {
   .cards2__content {
-    text-align: left;
+    text-align: center;
   }
 }
 @media screen and (min-width: 68.5rem) {
@@ -883,6 +922,10 @@ The last (second) card image was supposed to stay on the opposite  side  of the
 first card but now that has been cancelled as it has taken the styles of the last child
 To overide - solution below was used.
 */
+.secondary__cards__about .cards2:first-child::before {
+  background-image: url("../../assets/patterns/left-upward-arrow.svg");
+  background-position: 0% 55%;
+}
 @media screen and (min-width: 38.75rem) {
   .secondary__cards__about .cards2:last-child::before {
     background-position: 100% 6%;
@@ -1019,7 +1062,7 @@ To overide - solution below was used.
 }
 
 .accordion__section {
-  margin-top: 10rem;
+  margin-top: 5.8rem;
   margin-bottom: 5rem;
 }
 
@@ -1030,13 +1073,33 @@ To overide - solution below was used.
   color: #495567;
   font-weight: 900;
 }
+@media screen and (min-width: 38.75rem) {
+  .accordion__title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .accordion__title {
+    text-align: left;
+  }
+}
 
 .accordion__title__wrapper {
   margin-top: 0.5rem;
 }
+@media screen and (min-width: 67.5rem) {
+  .accordion__title__wrapper {
+    flex: 1 1 25%;
+  }
+}
 
 .accordion {
   margin-top: 1.8rem;
+}
+@media screen and (min-width: 67.5rem) {
+  .accordion {
+    flex: 1 1 60%;
+  }
 }
 
 .accordion__section__heading {
@@ -1045,6 +1108,11 @@ To overide - solution below was used.
   font-size: 2rem;
   color: #495567;
   font-weight: 900;
+}
+@media screen and (min-width: 38.75rem) {
+  .accordion__section__heading {
+    font-size: 3rem;
+  }
 }
 
 .accordion__wrapper {
@@ -1055,6 +1123,18 @@ To overide - solution below was used.
   border-width: 1px;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+}
+@media screen and (min-width: 38.75rem) {
+  .accordion__wrapper {
+    padding: 2.4375rem;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .accordion__wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 2.4375rem 10.3125rem;
+  }
 }
 
 .accordion-item {
@@ -1115,8 +1195,13 @@ To overide - solution below was used.
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
+@media screen and (min-width: 38.75rem) {
+  .accordion-button {
+    font-size: 1.5rem;
+  }
+}
 
-/****** ACCORDION BUTTON START *****/
+/****** ACCORDION BUTTON END *****/
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled),
@@ -1142,5 +1227,5 @@ button:focus:not(:focus-visible) {
 }
 
 .main__about {
-  margin-top: 1.2rem;
+  margin-top: -3.5rem;
 }

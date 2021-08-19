@@ -97,6 +97,10 @@
   font-size: base.calculateRem(20);
   margin-top: 1rem;
   font-family: base.$secondary-font;
+
+  @media screen and (min-width: 38.75rem) {
+    font-size: base.calculateRem(24);
+  }
 }
 
 .card__content {
@@ -115,6 +119,10 @@
   color: base.$mid-mid-grey;
   font-weight: 700;
   letter-spacing: -1.43px;
+
+  @media screen and (min-width: 38.75rem) {
+    font-size: base.calculateRem(48);
+  }
 }
 
 .large__card__wrapper {
@@ -135,6 +143,15 @@
     left: 50%;
     margin-left: -3rem;
   }
+/*
+  &:nth-child(2)::before {
+    content: "02";
+  }
+
+  &:last-child::before {
+    content: "03";
+  }
+  */
 
   @media screen and (min-width: 38.75rem) {
     &::before {
@@ -156,9 +173,20 @@
     display: block;
 
     .card__splitter {
-      /* justify-content: center; */
+       justify-content: center; 
       align-items: center;
+      max-width: 28.5625rem;
+      margin: auto;
     }
+
+    .card__content {      
+      text-align: center;
+    }
+
+    .card__title {      
+      margin-top: 2rem;
+    }
+
   }
 }
 /*----------------END OVERIDING ABOUT PAGE---------------*/
