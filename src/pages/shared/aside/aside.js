@@ -2,7 +2,7 @@ import Apple from '../../../assets/icons/app-store.svg'
 import Google from '../../../assets/icons/google-play.svg'
 const Aside = () => {
     return (
-        <aside className="aside" role="contentinfo">
+        <aside id="sign" className="aside" role="contentinfo">
             <h2 className="aside__title">
                 Sign up and Scoot off today
             </h2>

@@ -15,7 +15,7 @@ const Header = (props) => {
                         {props.content}
                     </p>
                     <div className="hero__btn__wrapper">
-                        <BtnScoot title="Get Scootin" heroWrapper={true} heroBtn={true} />
+                        <BtnScoot href="#sign" title="Get Scootin" heroWrapper={true} heroBtn={true} />
                     </div>
                 </div>
                 <span className="inner__img"></span>

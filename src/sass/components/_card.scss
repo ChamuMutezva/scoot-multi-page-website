@@ -77,7 +77,8 @@
   }
 
   @media screen and (min-width: 67.5rem) {
-    margin-left: 0;
+   // margin-left: 0;
+    margin: auto;
   }
 }
 .small__card {
@@ -143,7 +144,7 @@
     left: 50%;
     margin-left: -3rem;
   }
-/*
+  /*
   &:nth-child(2)::before {
     content: "02";
   }
@@ -169,24 +170,54 @@
 }
 
 .card__about {
+/*
+  &:first-child {
+    .large__card__wrapper {
+      &::before {
+        content: "01";
+      }
+    }
+  }
+  */
+  /* 
+  heavy nesting, could not find a way to reach the 
+  span before element without nesting
+  the component is used in 3 pages
+  */
+
+  &:nth-child(2) {
+    .large__card__wrapper {
+      &::before {
+        content: "02";
+      }
+    }
+  }
+
+  &:last-child {
+    .large__card__wrapper {
+      &::before {
+        content: "03";
+      }
+    }
+  }
+
   @media screen and (min-width: 38.75rem) {
     display: block;
 
     .card__splitter {
-       justify-content: center; 
+      justify-content: center;
       align-items: center;
       max-width: 28.5625rem;
       margin: auto;
     }
 
-    .card__content {      
+    .card__content {
       text-align: center;
     }
 
-    .card__title {      
+    .card__title {
       margin-top: 2rem;
     }
-
   }
 }
 /*----------------END OVERIDING ABOUT PAGE---------------*/

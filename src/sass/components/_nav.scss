@@ -92,6 +92,7 @@
   font-family: base.$secondary-font;
   font-size: base.calculateRem(15);
   font-weight: 700;
+  
   &:hover,
   &:focus {
     cursor: pointer;
@@ -158,6 +159,7 @@
   color: base.$white;
   padding: 0.9rem 3rem;
   margin-top: 1rem;
+  text-decoration: none;
 
   &:hover,
   &:focus {

@@ -12,7 +12,7 @@ const SecondaryCard = (props) => {
                     {props.content}
                 </p>
                 <div className={`secondary__show--btn ${hideBtn}`}>
-                    <BtnScoot title={props.btnTitle} secondaryBtn={true}/>
+                    <BtnScoot href={props.href} title={props.btnTitle} secondaryBtn={true}/>
                 </div>
             </div>
             

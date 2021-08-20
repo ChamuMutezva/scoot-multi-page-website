@@ -4,9 +4,9 @@ const BtnScoot = (props) => {
     const secondaryBtn = props.secondaryBtn ? "cards__secondary--btn" : ""
     return (
         <div className={`wrapper__scoot ${heroWrapper}`}>
-            <button className={`wrapper__scoot--btn ${heroBtn} ${secondaryBtn}`}>
+            <a href={props.href} className={`wrapper__scoot--btn ${heroBtn} ${secondaryBtn}`}>
                 {props.title}
-            </button>
+            </a>
         </div>
     )
 }

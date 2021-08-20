@@ -223,7 +223,7 @@ To overide - solution below was used.
     &:first-child {
       &::before {
         background-image: url("../../assets/patterns/left-upward-arrow.svg");
-        background-position: 0% 55%;
+        background-position: 0% 40%;
       }
     }
     @media screen and (min-width: 38.75rem) {
@@ -237,6 +237,13 @@ To overide - solution below was used.
     }
 
     @media screen and (min-width: 67.5rem) {
+
+      &:first-child {
+        &::before {          
+          background-position: 100% 100%;
+        }
+      }
+
       &:last-child {
         flex-direction: row;
         &::before {

@@ -159,6 +159,7 @@ body {
   color: #ffffff;
   margin-top: 1rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 .hero__home .hero__btn__wrapper {
   display: flex;
@@ -505,6 +506,7 @@ body {
   color: #ffffff;
   padding: 0.9rem 3rem;
   margin-top: 1rem;
+  text-decoration: none;
 }
 .wrapper__scoot--btn:hover, .wrapper__scoot--btn:focus {
   cursor: pointer;
@@ -626,7 +628,7 @@ body {
 }
 @media screen and (min-width: 67.5rem) {
   .card__img {
-    margin-left: 0;
+    margin: auto;
   }
 }
 
@@ -687,14 +689,14 @@ body {
   margin-top: -2.5rem;
   position: relative;
   /*
-    &:nth-child(2)::before {
-      content: "02";
-    }
+  &:nth-child(2)::before {
+    content: "02";
+  }
 
-    &:last-child::before {
-      content: "03";
-    }
-    */
+  &:last-child::before {
+    content: "03";
+  }
+  */
 }
 .large__card__wrapper::before {
   position: absolute;
@@ -724,6 +726,28 @@ body {
   }
 }
 
+.card__about {
+  /*
+    &:first-child {
+      .large__card__wrapper {
+        &::before {
+          content: "01";
+        }
+      }
+    }
+    */
+  /* 
+  heavy nesting, could not find a way to reach the 
+  span before element without nesting
+  the component is used in 3 pages
+  */
+}
+.card__about:nth-child(2) .large__card__wrapper::before {
+  content: "02";
+}
+.card__about:last-child .large__card__wrapper::before {
+  content: "03";
+}
 @media screen and (min-width: 38.75rem) {
   .card__about {
     display: block;
@@ -924,7 +948,7 @@ To overide - solution below was used.
 */
 .secondary__cards__about .cards2:first-child::before {
   background-image: url("../../assets/patterns/left-upward-arrow.svg");
-  background-position: 0% 55%;
+  background-position: 0% 40%;
 }
 @media screen and (min-width: 38.75rem) {
   .secondary__cards__about .cards2:last-child::before {
@@ -934,6 +958,9 @@ To overide - solution below was used.
   }
 }
 @media screen and (min-width: 67.5rem) {
+  .secondary__cards__about .cards2:first-child::before {
+    background-position: 100% 100%;
+  }
   .secondary__cards__about .cards2:last-child {
     flex-direction: row;
   }
@@ -1220,6 +1247,73 @@ button:not(:disabled) {
 
 button:focus:not(:focus-visible) {
   outline: 0;
+}
+
+.card__job__info {
+  background-color: #f2f5f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 0.5rem;
+}
+@media screen and (min-width: 38.75rem) {
+  .card__job__info {
+    flex-direction: row;
+    padding: 2rem 3.625rem;
+    justify-content: space-between;
+  }
+}
+.cards__jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 38.75rem) {
+  .cards__jobs {
+    max-width: 43.0625rem;
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .cards__jobs {
+    max-width: 69.375rem;
+  }
+}
+
+.apply {
+  background-color: #FCB72B;
+  font-family: "Space Mono", monospace;
+  text-decoration: none;
+  color: #ffffff;
+  width: 15.4375rem;
+  max-width: 90%;
+  text-align: center;
+  padding: 0.85rem;
+  font-weight: 700;
+}
+
+.job__title {
+  font-size: 1.125rem;
+  font-family: "Space Mono", monospace;
+  color: #495567;
+}
+
+.job__area {
+  font-size: 0.9375rem;
+  color: #495567;
+  padding: 0.5rem;
+  text-align: center;
+}
+@media screen and (min-width: 38.75rem) {
+  .job__area {
+    text-align: left;
+  }
+}
+.maps {
+  margin: auto;
+  padding: 0 2rem 2rem;
 }
 
 .App {
