@@ -5,6 +5,16 @@
   margin-bottom: 5rem;
 }
 
+.accordion {
+  margin-top: 1.8rem;
+  @media screen and (min-width: 67.5rem) {
+    flex: 1 1 60%;
+  }
+}
+
+/*****************************************
+        ACCORDION HEADING WRAPPER - TITLE
+ *****************************************/
 .accordion__title {
   text-align: center;
   font-family: base.$secondary-font;
@@ -27,12 +37,13 @@
   }
 }
 
-.accordion {
-  margin-top: 1.8rem;
-  @media screen and (min-width: 67.5rem) {
-    flex: 1 1 60%;
-  }
-}
+
+/*********************************************
+        ACCORDION HEADING AND WRAPPER - TITLE
+                          END
+ **********************************************/
+
+
 
 .accordion__section__heading {
   text-align: center;
@@ -83,7 +94,9 @@
   color: base.$mid-mid-grey;
 }
 
-/****** ACCORDION BUTTON START *****/
+/**************************************
+            ACCORDION BUTTON START 
+ **************************************/
 
 .accordion-button {
   position: relative;
@@ -137,7 +150,10 @@
   }
 }
 
-/****** ACCORDION BUTTON END *****/
+/******************************************
+                ACCORDION BUTTON
+                       END 
+ ******************************************/
 
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),

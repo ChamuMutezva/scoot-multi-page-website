@@ -3,7 +3,7 @@ import Main from './main'
 const MainLocation = () => {
     return(
         <div>
-            <Header title="Loacation" location={true}/>
+            <Header title="Location" location={true}/>
             <Main />
         </div>
     )

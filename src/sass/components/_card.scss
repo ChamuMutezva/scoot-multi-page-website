@@ -71,13 +71,13 @@
   display: block;
   margin: auto;
   border-radius: 50%;
+
   @media screen and (min-width: 38.75rem) {
     width: 100%;
     max-width: 6rem;
   }
 
-  @media screen and (min-width: 67.5rem) {
-   // margin-left: 0;
+  @media screen and (min-width: 67.5rem) {  
     margin: auto;
   }
 }
@@ -143,16 +143,7 @@
     bottom: -3rem;
     left: 50%;
     margin-left: -3rem;
-  }
-  /*
-  &:nth-child(2)::before {
-    content: "02";
-  }
-
-  &:last-child::before {
-    content: "03";
-  }
-  */
+  } 
 
   @media screen and (min-width: 38.75rem) {
     &::before {
@@ -162,7 +153,10 @@
   }
 }
 
-/*----------------OVERIDING ABOUT PAGE---------------*/
+/***************************************************
+                OVERIDING ABOUT PAGE
+                        START
+****************************************************/
 .large__card {
   @media screen and (min-width: 38.75rem) {
     max-width: 15rem;
@@ -170,15 +164,7 @@
 }
 
 .card__about {
-/*
-  &:first-child {
-    .large__card__wrapper {
-      &::before {
-        content: "01";
-      }
-    }
-  }
-  */
+
   /* 
   heavy nesting, could not find a way to reach the 
   span before element without nesting
@@ -220,4 +206,7 @@
     }
   }
 }
-/*----------------END OVERIDING ABOUT PAGE---------------*/
+/*******************************************************
+                  OVERIDING ABOUT PAGE
+                            END
+********************************************************/

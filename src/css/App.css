@@ -688,15 +688,6 @@ body {
   margin-bottom: 5rem;
   margin-top: -2.5rem;
   position: relative;
-  /*
-  &:nth-child(2)::before {
-    content: "02";
-  }
-
-  &:last-child::before {
-    content: "03";
-  }
-  */
 }
 .large__card__wrapper::before {
   position: absolute;
@@ -719,7 +710,10 @@ body {
   }
 }
 
-/*----------------OVERIDING ABOUT PAGE---------------*/
+/***************************************************
+                OVERIDING ABOUT PAGE
+                        START
+****************************************************/
 @media screen and (min-width: 38.75rem) {
   .large__card {
     max-width: 15rem;
@@ -727,15 +721,6 @@ body {
 }
 
 .card__about {
-  /*
-    &:first-child {
-      .large__card__wrapper {
-        &::before {
-          content: "01";
-        }
-      }
-    }
-    */
   /* 
   heavy nesting, could not find a way to reach the 
   span before element without nesting
@@ -766,7 +751,10 @@ body {
   }
 }
 
-/*----------------END OVERIDING ABOUT PAGE---------------*/
+/*******************************************************
+                  OVERIDING ABOUT PAGE
+                            END
+********************************************************/
 .secondary__cards {
   padding: 0 2rem;
 }
@@ -1093,6 +1081,18 @@ To overide - solution below was used.
   margin-bottom: 5rem;
 }
 
+.accordion {
+  margin-top: 1.8rem;
+}
+@media screen and (min-width: 67.5rem) {
+  .accordion {
+    flex: 1 1 60%;
+  }
+}
+
+/*****************************************
+        ACCORDION HEADING WRAPPER - TITLE
+ *****************************************/
 .accordion__title {
   text-align: center;
   font-family: "Space Mono", monospace;
@@ -1120,15 +1120,10 @@ To overide - solution below was used.
   }
 }
 
-.accordion {
-  margin-top: 1.8rem;
-}
-@media screen and (min-width: 67.5rem) {
-  .accordion {
-    flex: 1 1 60%;
-  }
-}
-
+/*********************************************
+        ACCORDION HEADING AND WRAPPER - TITLE
+                          END
+ **********************************************/
 .accordion__section__heading {
   text-align: center;
   font-family: "Space Mono", monospace;
@@ -1181,7 +1176,9 @@ To overide - solution below was used.
   color: #495567;
 }
 
-/****** ACCORDION BUTTON START *****/
+/**************************************
+            ACCORDION BUTTON START 
+ **************************************/
 .accordion-button {
   position: relative;
   display: flex;
@@ -1228,7 +1225,10 @@ To overide - solution below was used.
   }
 }
 
-/****** ACCORDION BUTTON END *****/
+/******************************************
+                ACCORDION BUTTON
+                       END 
+ ******************************************/
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled),
@@ -1314,10 +1314,118 @@ button:focus:not(:focus-visible) {
 .maps {
   margin: auto;
   padding: 0 2rem 2rem;
+  position: relative;
+}
+
+.map__image {
+  margin: 1rem auto 2.5rem;
+}
+
+.map__extras {
+  margin-top: 3.5rem;
+  text-align: center;
+  padding: 0 3.8rem;
+}
+
+.city {
+  display: inline-block;
+  width: 100%;
+  max-width: 23.75rem;
+  background-color: #fff4df;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1.1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 38.75rem) {
+  .city {
+    position: absolute;
+    background-color: #FCB72B;
+    max-width: 7.5rem;
+    font-size: 0.8125rem;
+    padding: 0.6rem;
+  }
+  .city::before {
+    position: absolute;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: #FCB72B;
+    left: 50%;
+    bottom: -7px;
+    transform: rotate(45deg);
+  }
+}
+
+@media screen and (min-width: 38.75rem) {
+  .jakarta {
+    top: 22%;
+    right: 18%;
+  }
+}
+
+@media screen and (min-width: 38.75rem) {
+  .yokohama {
+    top: 7%;
+    right: 12%;
+  }
+}
+
+@media screen and (min-width: 38.75rem) {
+  .london {
+    top: 2%;
+    right: 49%;
+  }
+}
+
+@media screen and (min-width: 38.75rem) {
+  .new__york {
+    top: 6%;
+    right: 69%;
+  }
+}
+
+.map__image__map {
+  margin: auto;
+}
+
+.location__select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__btn__wrapper__loc {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.map__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #495567;
+  font-family: "Space Mono", monospace;
+  letter-spacing: -1.43px;
+  line-height: 1.2;
+}
+@media screen and (min-width: 38.75rem) {
+  .map__title {
+    font-size: 3rem;
+  }
+}
+
+.map__content {
+  margin-top: 1.5rem;
+  color: #939CAA;
+  font-size: 0.9375rem;
 }
 
 .App {
   overflow-x: hidden;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .main__about {
