@@ -447,6 +447,7 @@ body {
   cursor: pointer;
   outline: dashed currentColor;
   outline-offset: 0.25em;
+  color: #FCB72B;
 }
 @media screen and (min-width: 38.75rem) {
   .nav__item--btn {
@@ -495,13 +496,13 @@ body {
 }
 .logo--btn:hover, .logo--btn:focus {
   cursor: pointer;
-  outline: dashed currentColor;
+  outline: dashed #FCB72B;
   outline-offset: 0.25em;
 }
 
 .wrapper__scoot--btn {
   background-color: #FCB72B;
-  border: none;
+  border: 0.25rem solid transparent;
   font-size: 0.9375rem;
   color: #ffffff;
   padding: 0.9rem 3rem;
@@ -510,8 +511,11 @@ body {
 }
 .wrapper__scoot--btn:hover, .wrapper__scoot--btn:focus {
   cursor: pointer;
-  outline: dashed #333A44;
+  outline: dashed #FCB72B;
   outline-offset: 0.25em;
+  border: 0.25rem solid #FCB72B;
+  color: #FCB72B;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 38.75rem) {
   .wrapper__scoot--btn {
@@ -1000,7 +1004,7 @@ To overide - solution below was used.
 
 .aside__deco--btn:hover, .aside__deco--btn:focus {
   cursor: pointer;
-  outline: dashed currentColor;
+  outline: dashed #FCB72B;
   outline-offset: 0.25em;
 }
 
@@ -1051,9 +1055,6 @@ To overide - solution below was used.
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-}
-.footer__nav .nav__item--btn {
-  color: #939CAA;
 }
 @media screen and (min-width: 38.75rem) {
   .footer__nav {
@@ -1137,6 +1138,15 @@ To overide - solution below was used.
   }
 }
 
+/*
+.accordion-header {
+
+   &:hover{
+     background-color: turquoise;
+   } 
+
+}
+*/
 .accordion__wrapper {
   padding: 2rem;
   margin: auto;
@@ -1168,6 +1178,9 @@ To overide - solution below was used.
 .accordion-item:first-of-type {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+}
+.accordion-item:focus-within {
+  background-color: #fff4df;
 }
 
 .accordion-body {
@@ -1213,11 +1226,12 @@ To overide - solution below was used.
   background-image: url("../../assets/icons/chevron.svg");
   transform: rotate(-180deg);
 }
-.accordion-button:focus {
+.accordion-button:focus, .accordion-button:hover {
   z-index: 3;
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  background-color: #fff4df;
 }
 @media screen and (min-width: 38.75rem) {
   .accordion-button {
@@ -1284,6 +1298,7 @@ button:focus:not(:focus-visible) {
 
 .apply {
   background-color: #FCB72B;
+  border: 0.25rem solid transparent;
   font-family: "Space Mono", monospace;
   text-decoration: none;
   color: #ffffff;
@@ -1292,6 +1307,14 @@ button:focus:not(:focus-visible) {
   text-align: center;
   padding: 0.85rem;
   font-weight: 700;
+}
+.apply:hover, .apply:focus {
+  border: 0.25rem solid #FCB72B;
+  background-color: #ffffff;
+  color: #495567;
+  cursor: pointer;
+  outline: dashed #FCB72B;
+  outline-offset: 0.25em;
 }
 
 .job__title {

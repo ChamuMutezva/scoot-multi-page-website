@@ -177,13 +177,20 @@ const Main = () => {
                             <h4 className="accordion-header" id="headingOne">
                                 <button className="accordion-button"
                                     onClick={handleSubmit}
-                                    type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne"
+                                    aria-expanded="true"
+                                    aria-live="polite"
+                                    aria-controls="collapseOne">
                                     How do I download the app?
                                 </button>
                             </h4>
 
-                            <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapseOne"
+                                className="accordion-collapse collapse show"
+                                aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     To download the Scoot app, you can search “Scoot” in both the App and Google Play stores.
                                     An even simpler way to do it would be to click the relevant link at the bottom of this
@@ -195,15 +202,26 @@ const Main = () => {
 
                         {/*ACCORDION ITEM TWO OF 1*/}
                         <div className="accordion-item">
-                            <h4 className="accordion-header" id="headingTwo">
+                            <h4 className="accordion-header"
+                                id="headingTwo">
 
                                 <button className="accordion-button collapsed"
-                                    onClick={handleSubmit} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    onClick={handleSubmit}
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo"
+                                    aria-expanded="false"
+                                    aria-live="polite"
+                                    aria-controls="collapseTwo">
                                     Can I find a nearby Scoots?
                                 </button>
                             </h4>
 
-                            <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div id="collapseTwo"
+                                className="accordion-collapse collapse"
+                                aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+
                                 <div className="accordion-body">
                                     Definitely! Simply open up the app and allow us to find your location while using it. We'll
                                     show you all of the closest Scoots and some extra useful information.
@@ -214,14 +232,26 @@ const Main = () => {
 
                         {/*ACCORDION ITEM THREE OF 1 */}
                         <div className="accordion-item">
-                            <h4 className="accordion-header" id="headingThree">
+                            <h4 className="accordion-header"
+                                id="headingThree">
+
                                 <button className="accordion-button collapsed"
-                                    onClick={handleSubmit} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    onClick={handleSubmit}
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree"
+                                    aria-expanded="false"
+                                    aria-live="polite"
+                                    aria-controls="collapseThree">
                                     Do I need a license to ride?
                                 </button>
                             </h4>
 
-                            <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div id="collapseThree"
+                                className="accordion-collapse collapse"
+                                aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+
                                 <div className="accordion-body">
                                     Yup! We provide information inside the app regarding local laws and the license you need to be
                                     able to ride our Scoots.
@@ -238,42 +268,67 @@ const Main = () => {
              ********************STARTING POINT ACCORDION NUMBER 2 *******/}
 
                 <div className="accordion__wrapper accordion__wrapper2">
+
                     <div className="accordion__title__wrapper">
                         <h3 className="accordion__title">Safe driving</h3>
                     </div>
-                    <div className="accordion" id="accordionExample">
+
+                    <div className="accordion"
+                        id="accordionExample">
                         {/*ACCORDION ITEM ONE OF 2 */}
                         <div className="accordion-item">
-                            <h4 className="accordion-header" id="headingFive">
+
+                            <h4 className="accordion-header"
+                                id="headingFive">
                                 <button className="accordion-button accordion-button2"
-                                    onClick={handleSubmit2}
-                                    type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    onClick={handleSubmit}
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive"
+                                    aria-expanded="true"
+                                    aria-live="polite"
+                                    aria-controls="collapseFive">
                                     Should I wear a helmet?
                                 </button>
                             </h4>
 
-                            <div id="collapseFive" className="accordion-collapse accordion-collapse2 collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapseFive"
+                                className="accordion-collapse accordion-collapse2 collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+
                                 <div className="accordion-body">
                                     Yes, please do! All cities have different laws. But we strongly strongly strongly recommend
                                     always wearing a helmet regardless of the local laws. We like you and we want you to be as
                                     safe as possible while Scooting.
                                 </div>
+
                             </div>
+
                         </div>
                         {/********* ACCORDION ITEM ONE OF 2 END******** */}
 
                         {/*ACCORDION ITEM TWO OF 2*/}
                         <div className="accordion-item">
-                            <h4 className="accordion-header" id="headingSix">
+                            <h4 className="accordion-header"
+                                id="headingSix">
 
                                 <button className="accordion-button accordion-button2 collapsed"
-                                    onClick={handleSubmit2} type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    onClick={handleSubmit}
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix"
+                                    aria-expanded="false"
+                                    aria-live="polite"
+                                    aria-controls="collapseSix">
                                     How about the rules &amp; regulations?
                                 </button>
                             </h4>
 
-                            <div id="collapseSix" className="accordion-collapse accordion-collapse2 collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div id="collapseSix"
+                                className="accordion-collapse accordion-collapse2 collapse"
+                                aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+
                                 <div className="accordion-body">
                                     Now is not the time to be a rule breaker. Be sure you're complying with all local laws and
                                     regulations. Also, just be a good human being. Be sure not to park your Scoot where it can
@@ -285,20 +340,33 @@ const Main = () => {
 
                         {/*ACCORDION ITEM THREE OF 2 */}
                         <div className="accordion-item">
-                            <h4 className="accordion-header" id="headingSeven">
+                            <h4 className="accordion-header"
+                                id="headingSeven">
                                 <button className="accordion-button accordion-button2 collapsed"
-                                    onClick={handleSubmit2} type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    onClick={handleSubmit}
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven"
+                                    aria-expanded="false"
+                                    aria-live="polite"
+                                    aria-controls="collapseSeven">
                                     What if I damage my Scoot?
                                 </button>
                             </h4>
 
-                            <div id="collapseSeven" className="accordion-collapse accordion-collapse2 collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div id="collapseSeven"
+                                className="accordion-collapse accordion-collapse2 collapse"
+                                aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+
                                 <div className="accordion-body">
                                     Be sure to read our terms and conditions carefully. Not the most fun job we know but we make
                                     it as clear as possible. There's an option to add insurance for each trip, or you can sign
                                     up for annual insurance if you're a regular Scooter.
                                 </div>
+
                             </div>
+
                         </div>
                         {/************ACCORDION ITEM THREE OF 2 END********* */}
                     </div>

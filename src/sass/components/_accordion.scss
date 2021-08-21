@@ -55,7 +55,15 @@
     font-size: base.calculateRem(48);
   }
 }
+/*
+.accordion-header {
+ 
+   &:hover{
+     background-color: turquoise;
+   } 
 
+}
+*/
 .accordion__wrapper {
   padding: 2rem;
   margin: auto;
@@ -85,6 +93,10 @@
   &:first-of-type {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
+  }
+
+  &:focus-within {
+    background-color: base.$peach;
   }
 }
 
@@ -138,11 +150,12 @@
     transform: rotate(-180deg);
   }
 
-  &:focus {
+  &:focus, &:hover {
     z-index: 3;
     border-color: #86b7fe;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    background-color: base.$peach;
   }
 
   @media screen and (min-width: 38.75rem) {

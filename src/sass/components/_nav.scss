@@ -98,6 +98,7 @@
     cursor: pointer;
     outline: dashed currentColor;
     outline-offset: 0.25em;
+    color: base.$yellow
   }
 
   @media screen and (min-width: 38.75rem) {
@@ -147,14 +148,14 @@
   &:hover,
   &:focus {
     cursor: pointer;
-    outline: dashed currentColor;
+    outline: dashed base.$yellow;
     outline-offset: 0.25em;
   } 
 }
 
 .wrapper__scoot--btn {
   background-color: base.$yellow;
-  border: none;
+  border: .25rem solid transparent;
   font-size: base.calculateRem(15);
   color: base.$white;
   padding: 0.9rem 3rem;
@@ -164,8 +165,11 @@
   &:hover,
   &:focus {
     cursor: pointer;
-    outline: dashed base.$mid-grey;
+    outline: dashed base.$yellow;
     outline-offset: 0.25em;
+    border: .25rem solid base.$yellow;
+    color: base.$yellow;
+    background-color: base.$white;
   }
 
   @media screen and (min-width: 38.75rem) {

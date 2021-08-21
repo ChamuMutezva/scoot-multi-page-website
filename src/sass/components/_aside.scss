@@ -36,7 +36,7 @@
   &:hover,
   &:focus {
     cursor: pointer;
-    outline: dashed currentColor;
+    outline: dashed base.$yellow;
     outline-offset: 0.25em;
   }
 }
