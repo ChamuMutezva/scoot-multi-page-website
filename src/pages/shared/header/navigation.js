@@ -28,7 +28,7 @@ const Navigation = () => {
     const trial = document.querySelector;
     console.log(typeof trial)
     return (
-        <nav className="nav" role="navigation" aria-label="main navigation">
+        <nav className="nav" aria-label="main navigation">
             {/*Opening and closing the menu */}
             <div className="menu__control">
                 <button className="show__menu" aria-label="open navigation" aria-expanded="false" onClick={handleClick}>
