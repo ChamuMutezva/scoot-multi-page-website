@@ -15,9 +15,8 @@ const Main = () => {
     return (
         <main className="main main__home">
             <section className="primary"
-                role="contentinfo"
                 aria-label="Steps to taken to successfully benefit from scoot">
-                    
+
                 <h2 className="primary__title sr-only">How the application works?</h2>
                 <div className="cards">
 
@@ -39,7 +38,8 @@ const Main = () => {
                 </div>
             </section>
 
-            <section className="secondary" role="contentinfo" aria-label="advantages of using scoot">
+            <section className="secondary"
+                aria-label="advantages of using scoot">
                 <h2 className="secondary__title sr-only">The benefits of using scoot</h2>
                 <div className="secondary__cards">
                     <SecondaryCard src={Telementry}

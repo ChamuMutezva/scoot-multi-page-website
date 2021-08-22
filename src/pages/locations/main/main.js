@@ -6,8 +6,7 @@ import BtnScoot from '../../shared/header/BtnScoot'
 const Main = () => {
     return (
         <main className="main main__location">
-            <section className="primary"
-                role="contentinfo"
+            <section className="primary"               
                 aria-label="our areas of business worldwide">
 
                 <h2 className="sr-only">the world map showing our areas of operating</h2>

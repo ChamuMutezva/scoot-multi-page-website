@@ -10,8 +10,7 @@ import Community from '../../../assets/images/our-community.jpg'
 const Main = () => {
     return (
         <main className="main main__careers">
-            <section className="secondary"
-                role="contentinfo"
+            <section className="secondary"                
                 aria-label="partner with us through our career offers">
                 <h2 className="secondary__title sr-only">Careers</h2>
                 <div className="secondary__cards ">
@@ -26,8 +25,7 @@ const Main = () => {
                 </div>
             </section>
 
-            <section className="primary"
-                role="contentinfo"
+            <section className="primary"               
                 aria-label="Everything you need to know to work with us">
 
                 <h2 className="primary__title">Why join us?</h2>
@@ -57,8 +55,7 @@ const Main = () => {
                 </div>
             </section>
 
-            <section role="contentinfo"
-                aria-label="here are a list of available vacancies">
+            <section aria-label="here are a list of available vacancies">
                 <h2 className="secondary__title sr-only">
                     a wide list of all the vacancies available
                 </h2>

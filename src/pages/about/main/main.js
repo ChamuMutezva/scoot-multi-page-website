@@ -38,8 +38,7 @@ const Main = () => {
 
     return (
         <main className="main main__about">
-            <section className="secondary"
-                role="contentinfo"
+            <section className="secondary"               
                 aria-label="our products and services">
                 <h2 className="secondary__title sr-only">Our services are here for you</h2>
 
@@ -57,8 +56,7 @@ const Main = () => {
 
             </section>
 
-            <section className="primary"
-                role="contentinfo"
+            <section className="primary"               
                 aria-label="What we stand for and value most">
 
                 <h2 className="primary__title">Our values</h2>
