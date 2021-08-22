@@ -492,7 +492,7 @@ body {
 }
 @media screen and (min-width: 67.5rem) {
   .wrapper__scoot {
-    justify-content: right;
+    justify-content: flex-end;
   }
 }
 
