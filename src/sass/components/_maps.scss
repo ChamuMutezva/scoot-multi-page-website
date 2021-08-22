@@ -14,6 +14,13 @@
   margin-top: 3.5rem;
   text-align: center;
   padding: 0 3.8rem;
+
+  @media screen and (min-width: 67.5rem) {
+	padding: 0 8.3125rem;
+    display: flex;
+	align-items: center;
+	gap: 3rem;
+  }
 }
 
 .city {
@@ -52,12 +59,20 @@
     top: 22%;
     right: 18%;
   }
+  @media screen and (min-width: 67.5rem) {
+    top: 30%;
+    right: 25%;
+  }
 }
 
 .yokohama {
   @media screen and (min-width: 38.75rem) {
     top: 7%;
     right: 12%;
+  }
+  @media screen and (min-width: 67.5rem) {
+    top: 13%;
+    right: 20%;
   }
 }
 
@@ -66,6 +81,10 @@
     top: 2%;
     right: 49%;
   }
+  @media screen and (min-width: 67.5rem) {
+    top: 5%;
+    right: 52%;
+  }
 }
 
 .new__york {
@@ -73,10 +92,14 @@
     top: 6%;
     right: 69%;
   }
+  @media screen and (min-width: 67.5rem) {
+    top: 13%;
+    right: 69%;
+  }
 }
 
 .map__image__map {
-	margin: auto;
+  margin: auto;
 }
 
 .location__select {
@@ -89,6 +112,10 @@
   display: flex;
   margin-top: 3rem;
   margin-bottom: 2rem;
+
+  @media screen and (min-width: 67.5rem) {
+    flex: 1 1 18%;
+  }
 }
 
 .map__title {
@@ -98,8 +125,14 @@
   font-family: base.$secondary-font;
   letter-spacing: -1.43px;
   line-height: 1.2;
+
   @media screen and (min-width: 38.75rem) {
-	font-size: base.calculateRem(48);
+    font-size: base.calculateRem(48);
+  }
+
+  @media screen and (min-width: 67.5rem) {
+    flex: 1 1 25%;
+	text-align: left;
   }
 }
 
@@ -107,4 +140,10 @@
   margin-top: 1.5rem;
   color: base.$mid-lt-grey;
   font-size: base.calculateRem(15);
+
+  @media screen and (min-width: 67.5rem) {
+    flex: 1 1 30%;
+	text-align: left;
+	margin-top: 0;
+  }
 }

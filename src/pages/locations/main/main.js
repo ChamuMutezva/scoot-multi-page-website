@@ -32,9 +32,9 @@ const Main = () => {
                     <div className="map__extras">
 
                         <h3 className="map__title">
-                            Your city not listed?                           
+                            Your city not listed?
                         </h3>
-
+                        
                         <p className="map__content">
                             If you’d like to see Scoot in your hometown, be sure to let us know. We track
                             requests and plan launches based on demand. Feel free to message us by clicking
@@ -42,8 +42,9 @@ const Main = () => {
                         </p>
 
                         <div className="hero__btn__wrapper secondary__show--btn hero__btn__wrapper__loc">
-                            <BtnScoot href="#" title="Message Us"/>
+                            <BtnScoot href="#" title="Message Us" />
                         </div>
+
                     </div>
 
                 </div>

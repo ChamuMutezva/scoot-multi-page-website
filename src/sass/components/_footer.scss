@@ -24,9 +24,12 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  
+  /*
   .nav__item--btn {
-   // color: base.$mid-lt-grey;
+   color: base.$mid-lt-grey;
   }
+  */
 
   @media screen and (min-width: 38.75rem) {
     flex-direction: row;

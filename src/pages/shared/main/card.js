@@ -1,4 +1,16 @@
+/*import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+*/
 const Card = (props) => {
+/*
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".card", {
+        scrollTrigger: {
+            trigger: ".card",
+            toggleActions: "restart pause none none"
+        }
+    })
+*/
     const smallCard = props.smallCard ? "small__card" : ""
     const largeCard = props.largeCard ? "large__card" : ""
     const cardSpan = props.largeCardWrapper ? "large__card__wrapper" : ""

@@ -8,6 +8,9 @@
   @media screen and (min-width: 38.75rem) {
     padding: 1.55rem 2.4375rem;
   }
+  @media screen and (min-width: 67.5rem) {
+    padding: 1.55rem 10.3125rem;
+  }
 }
 
 .menu__control {
@@ -29,6 +32,10 @@
   margin: auto;
   @media screen and (min-width: 38.75rem) {
     flex: 1 1 20%;
+  }
+
+  @media screen and (min-width: 67.5rem) {
+    flex: 1 1 10%;
   }
 }
 
@@ -92,13 +99,13 @@
   font-family: base.$secondary-font;
   font-size: base.calculateRem(15);
   font-weight: 700;
-  
+
   &:hover,
   &:focus {
     cursor: pointer;
     outline: dashed currentColor;
     outline-offset: 0.25em;
-    color: base.$yellow
+    color: base.$yellow;
   }
 
   @media screen and (min-width: 38.75rem) {
@@ -110,12 +117,10 @@
   &:hover,
   &:focus {
     cursor: pointer;
-    outline: dashed #FCB72B;
+    outline: dashed #fcb72b;
     outline-offset: 0.25em;
   }
-
 }
-
 
 .wrapper__scoot {
   margin: 0 auto;
@@ -126,6 +131,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  @media screen and (min-width: 67.5rem) {
+    justify-content: right;
+  }
 }
 
 .navigation__items {
@@ -133,6 +142,10 @@
     display: flex;
     flex: 1 1 50%;
     justify-content: space-between;
+  }
+
+  @media screen and (min-width: 67.5rem) {
+    flex: 1 1 20%;
   }
 }
 
@@ -150,12 +163,12 @@
     cursor: pointer;
     outline: dashed base.$yellow;
     outline-offset: 0.25em;
-  } 
+  }
 }
 
 .wrapper__scoot--btn {
   background-color: base.$yellow;
-  border: .25rem solid transparent;
+  border: 0.25rem solid transparent;
   font-size: base.calculateRem(15);
   color: base.$white;
   padding: 0.9rem 3rem;
@@ -167,7 +180,7 @@
     cursor: pointer;
     outline: dashed base.$yellow;
     outline-offset: 0.25em;
-    border: .25rem solid base.$yellow;
+    border: 0.25rem solid base.$yellow;
     color: base.$yellow;
     background-color: base.$white;
   }

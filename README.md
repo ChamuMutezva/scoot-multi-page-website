@@ -27,7 +27,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![desktop screenshot home](./src/assets/home.png)
+![desktop screenshot about](./src/assets/about.png)
+![desktop screenshot careers](./src/assets/careers.png)
 
 ### Links
 

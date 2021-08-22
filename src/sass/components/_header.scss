@@ -184,9 +184,7 @@
 
   @media screen and (min-width: 38.75rem) {
     background-image: url("../../assets/images/about-hero-tablet.jpg");
-    .inner__img {
-     // padding-top: 85%;
-    }
+
     &::after {
       top: 0;
       right: -1.4rem;
@@ -207,6 +205,10 @@
       right: -2.5rem;
       height: 100%;
       background-position: 0% 30%;
+    }
+
+    .hero__wrapper {
+      padding: 0 10.3125rem;
     }
   }
 }
@@ -234,7 +236,7 @@
   @media screen and (min-width: 38.75rem) {
     background-image: url("../../assets/images/careers-locations-hero-tablet.jpg");
     .inner__img {
-     // padding-top: 85%;
+      // padding-top: 85%;
     }
     &::after {
       top: 0;
@@ -256,6 +258,10 @@
       right: -2.5rem;
       height: 100%;
       background-position: 0% 30%;
+    }
+
+    .hero__wrapper {
+      padding: 0 10.3125rem;
     }
   }
 }

@@ -285,6 +285,9 @@ body {
     height: 100%;
     background-position: 0% 30%;
   }
+  .hero__about .hero__wrapper {
+    padding: 0 10.3125rem;
+  }
 }
 
 /* -----------------------------------------------------*/
@@ -339,6 +342,10 @@ body {
     height: 100%;
     background-position: 0% 30%;
   }
+  .hero__careers .hero__wrapper,
+.hero__location .hero__wrapper {
+    padding: 0 10.3125rem;
+  }
 }
 
 .nav {
@@ -350,6 +357,11 @@ body {
 @media screen and (min-width: 38.75rem) {
   .nav {
     padding: 1.55rem 2.4375rem;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .nav {
+    padding: 1.55rem 10.3125rem;
   }
 }
 
@@ -376,6 +388,11 @@ body {
 @media screen and (min-width: 38.75rem) {
   .logo__wrapper {
     flex: 1 1 20%;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .logo__wrapper {
+    flex: 1 1 10%;
   }
 }
 
@@ -457,7 +474,7 @@ body {
 
 .footer__socials--btn:hover, .footer__socials--btn:focus {
   cursor: pointer;
-  outline: dashed #FCB72B;
+  outline: dashed #fcb72b;
   outline-offset: 0.25em;
 }
 
@@ -473,12 +490,22 @@ body {
     align-items: center;
   }
 }
+@media screen and (min-width: 67.5rem) {
+  .wrapper__scoot {
+    justify-content: right;
+  }
+}
 
 @media screen and (min-width: 38.75rem) {
   .navigation__items {
     display: flex;
     flex: 1 1 50%;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .navigation__items {
+    flex: 1 1 20%;
   }
 }
 
@@ -927,6 +954,7 @@ body {
 @media screen and (min-width: 68.5rem) {
   .cards2__content {
     margin-bottom: 3rem;
+    text-align: left;
   }
 }
 
@@ -1055,6 +1083,11 @@ To overide - solution below was used.
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  /*
+  .nav__item--btn {
+   color: base.$mid-lt-grey;
+  }
+  */
 }
 @media screen and (min-width: 38.75rem) {
   .footer__nav {
@@ -1349,6 +1382,14 @@ button:focus:not(:focus-visible) {
   text-align: center;
   padding: 0 3.8rem;
 }
+@media screen and (min-width: 67.5rem) {
+  .map__extras {
+    padding: 0 8.3125rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+}
 
 .city {
   display: inline-block;
@@ -1387,11 +1428,23 @@ button:focus:not(:focus-visible) {
     right: 18%;
   }
 }
+@media screen and (min-width: 67.5rem) {
+  .jakarta {
+    top: 30%;
+    right: 25%;
+  }
+}
 
 @media screen and (min-width: 38.75rem) {
   .yokohama {
     top: 7%;
     right: 12%;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .yokohama {
+    top: 13%;
+    right: 20%;
   }
 }
 
@@ -1401,10 +1454,22 @@ button:focus:not(:focus-visible) {
     right: 49%;
   }
 }
+@media screen and (min-width: 67.5rem) {
+  .london {
+    top: 5%;
+    right: 52%;
+  }
+}
 
 @media screen and (min-width: 38.75rem) {
   .new__york {
     top: 6%;
+    right: 69%;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .new__york {
+    top: 13%;
     right: 69%;
   }
 }
@@ -1424,6 +1489,11 @@ button:focus:not(:focus-visible) {
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 67.5rem) {
+  .hero__btn__wrapper__loc {
+    flex: 1 1 18%;
+  }
+}
 
 .map__title {
   font-size: 2rem;
@@ -1438,11 +1508,24 @@ button:focus:not(:focus-visible) {
     font-size: 3rem;
   }
 }
+@media screen and (min-width: 67.5rem) {
+  .map__title {
+    flex: 1 1 25%;
+    text-align: left;
+  }
+}
 
 .map__content {
   margin-top: 1.5rem;
   color: #939CAA;
   font-size: 0.9375rem;
+}
+@media screen and (min-width: 67.5rem) {
+  .map__content {
+    flex: 1 1 30%;
+    text-align: left;
+    margin-top: 0;
+  }
 }
 
 .App {

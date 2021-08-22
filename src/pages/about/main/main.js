@@ -12,16 +12,12 @@ import Card from '../../shared/main/card'
 
 const Main = () => {
 
-    //  const [show, setShow] = useState(false)
-
-
     const handleSubmit = (evt) => {
         const btn = evt.target
         const attr = btn.getAttribute("aria-expanded");
         console.log(attr)
         btn.classList.toggle("collapsed")
 
-
         //  btn.setAttribute("aria-expanded", "true")
         const targetData = evt.target.dataset.bsTarget //get the target element by using the dataset - pointing
         // to id of target element
@@ -35,72 +31,8 @@ const Main = () => {
         } else {
             btn.setAttribute("aria-expanded", "false")
         }
-        /* get all buttons
-        const btns = Array.from(document.querySelectorAll(".accordion-button"))
-        btns.forEach(elm => {
-            if (btn === elm) {
-                elm.setAttribute("aria-expanded", "true")
-            } else {
-                elm.setAttribute("aria-expanded", "false")
-            }
-        })*/
-
-        /* get all targets elements in the accordion
-        const allTargets = Array.from(document.querySelectorAll(".accordion-collapse"))
-        // const targetDataId = targetData.substring(1) //get the id of the clicked element
-        console.log(allTargets)       
-        allTargets.forEach(elm => {
-            if (targetElement === elm) {
-                elm.classList.toggle("show")
-            } else {
-                elm.classList.remove("show")
-            }
-
-        })
-
-        */
-    }
-
-    const handleSubmit2 = (evt) => {
-        const btn = evt.target
-        btn.classList.toggle("collapsed")
-        const attr = btn.getAttribute("aria-expanded");
-        //  btn.setAttribute("aria-expanded", "true")
-        const targetData = evt.target.dataset.bsTarget //get the target element by using the dataset - pointing
-        // to id of target element
-        const targetElement = document.querySelector(targetData)
-
-        targetElement.classList.toggle("show")
-
-
-        if (attr === "false") {
-            btn.setAttribute("aria-expanded", "true")
-        } else {
-            btn.setAttribute("aria-expanded", "false")
-        }
-        /* get all buttons
-        const btns = Array.from(document.querySelectorAll(".accordion-button2"))
-        btns.forEach(elm => {
-            if (btn === elm) {
-                elm.setAttribute("aria-expanded", "true")
-            } else {
-                elm.setAttribute("aria-expanded", "false")
-            }
-        })
-        */
-        /*get all targets elements in the accordion
-        const allTargets = Array.from(document.querySelectorAll(".accordion-collapse2"))
-         const targetDataId = targetData.substring(1) //get the id of the clicked element
-        console.log(allTargets)       
-        allTargets.forEach(elm => {
-            if (targetElement === elm) {
-                elm.classList.toggle("show")
-            } else {
-                elm.classList.remove("show")
-            }
-
-        })*/
-    }
+      
+    }  
 
 
 

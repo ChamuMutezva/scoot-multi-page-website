@@ -11,9 +11,9 @@ const SecondaryCard = (props) => {
                 <p className="cards2__content">
                     {props.content}
                 </p>
-                <div className={`secondary__show--btn ${hideBtn}`}>
+                <div className={`secondary__show--btn ${hideBtn}`}>  
                     <BtnScoot href={props.href} title={props.btnTitle} secondaryBtn={true}/>
-                </div>
+               </div> 
             </div>
             
         </div>

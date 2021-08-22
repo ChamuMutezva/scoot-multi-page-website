@@ -1,6 +1,7 @@
-//import logo from './logo.svg';
 import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
 import { useEffect } from 'react'
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import Navigation from './pages/shared/header/navigation'
 import MainAbout from './pages/about/main/mainPage'
@@ -25,7 +26,22 @@ const ScrollToTop = () => {
   return null;
 }
 
+
 function App() {
+
+  useEffect(() => {
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".main", {
+      scrollTrigger: {
+        trigger: ".main",
+        toggleActions: "restart pause none none"
+      }
+    })
+  })
+
+
+
   return (
     <div className="App">
       <Router>

@@ -1,16 +1,28 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+//import { gsap } from 'gsap'
+//import { ScrollTrigger } from "gsap/ScrollTrigger"
 import BtnScoot from './BtnScoot'
 import Hamburger from '../../../assets/icons/hamburger.svg'
 import Close from '../../../assets/icons/close.svg'
 import Logo from '../../../assets/logo.svg'
 import NavList from './navList'
+
 const Navigation = () => {
     const [menu, setMenu] = useState(true)
+    // const animate = useRef()
+   // gsap.registerPlugin(ScrollTrigger);
 
     const handleClick = () => {
         setMenu(!menu)
         console.log("button clicked")
+      /*  if (menu) {
+            gsap.to(animate.current, {y: 10})
+        } else{
+            gsap.to(animate.current, {y: -10})
+        }
+        */
+       
     }
 
     const trial = document.querySelector;
