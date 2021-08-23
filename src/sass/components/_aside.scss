@@ -12,11 +12,18 @@
     background-position: 60% 100%;
   }
 
+  
+}
+
+.aside__wrapper {
   @media screen and (min-width: 67.5rem) {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1440px;
+    margin: auto;
   }
+
 }
 .aside__deco {
   max-width: 25rem;

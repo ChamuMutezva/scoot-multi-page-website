@@ -110,8 +110,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne"
-                                    aria-expanded="true"
-                                    aria-live="polite"
+                                    aria-expanded="true"                                   
                                     aria-controls="collapseOne">
                                     How do I download the app?
                                 </button>
@@ -140,8 +139,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo"
-                                    aria-expanded="false"
-                                    aria-live="polite"
+                                    aria-expanded="false"                                    
                                     aria-controls="collapseTwo">
                                     Can I find a nearby Scoots?
                                 </button>
@@ -170,8 +168,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree"
-                                    aria-expanded="false"
-                                    aria-live="polite"
+                                    aria-expanded="false"                                    
                                     aria-controls="collapseThree">
                                     Do I need a license to ride?
                                 </button>
@@ -215,8 +212,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive"
-                                    aria-expanded="true"
-                                    aria-live="polite"
+                                    aria-expanded="true"                                    
                                     aria-controls="collapseFive">
                                     Should I wear a helmet?
                                 </button>
@@ -247,8 +243,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseSix"
-                                    aria-expanded="false"
-                                    aria-live="polite"
+                                    aria-expanded="false"                                    
                                     aria-controls="collapseSix">
                                     How about the rules &amp; regulations?
                                 </button>
@@ -277,8 +272,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseSeven"
-                                    aria-expanded="false"
-                                    aria-live="polite"
+                                    aria-expanded="false"                                    
                                     aria-controls="collapseSeven">
                                     What if I damage my Scoot?
                                 </button>

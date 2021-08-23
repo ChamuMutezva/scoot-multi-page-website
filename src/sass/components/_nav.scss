@@ -4,11 +4,14 @@
     padding: 1.25rem;
     justify-content: flex-start;
     align-items: flex-end;
+   
     @media screen and (min-width: 38.75rem) {
         padding: 1.55rem 2.4375rem;
     }
     @media screen and (min-width: 67.5rem) {
         padding: 1.55rem 10.3125rem;
+        max-width: 1440px;
+        margin: auto;
     }
 }
 
@@ -154,6 +157,9 @@
 
 .logo--btn {
     outline: none;
+    &:focus-visible {
+        cursor: pointer;
+    }
     &:hover,
     &:focus {
         cursor: pointer;
@@ -190,7 +196,7 @@
     &:hover,
     &:focus {
         cursor: pointer;
-        outline: dashed base.$mid-grey;
+        outline: dashed base.$yellow;
         outline-offset: 0.25em;
     }
     @media screen and (min-width: 67.5rem) {

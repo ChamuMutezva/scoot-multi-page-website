@@ -11,22 +11,29 @@ import NavList from './navList'
 const Navigation = () => {
     const [menu, setMenu] = useState(true)
     // const animate = useRef()
-   // gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
+  
 
-    const handleClick = () => {
+    const handleClick = (evt) => {
+        const btn = document.querySelector(".show__menu")
+        const attr = btn.getAttribute("aria-expanded");
         setMenu(!menu)
-        console.log("button clicked")
-      /*  if (menu) {
-            gsap.to(animate.current, {y: 10})
-        } else{
-            gsap.to(animate.current, {y: -10})
+        
+        if (attr === "false") {
+            btn.setAttribute("aria-expanded", "true")
+        } else {
+            btn.setAttribute("aria-expanded", "false")
         }
-        */
-       
+        /*  if (menu) {
+              gsap.to(animate.current, {y: 10})
+          } else{
+              gsap.to(animate.current, {y: -10})
+          }
+          */
+
+
     }
 
-    const trial = document.querySelector;
-    console.log(typeof trial)
     return (
         <nav className="nav" aria-label="main navigation">
             {/*Opening and closing the menu */}
@@ -42,7 +49,9 @@ const Navigation = () => {
 
             {/*Company logo */}
             <div className="logo__wrapper">
-                <Link to="/" className="logo--btn">
+                <Link to="/" 
+                aria-label="homepage"                                
+                 className="logo--btn">
                     <img src={Logo} alt="Welcome to scoot international" />
                 </Link>
             </div>
@@ -50,8 +59,8 @@ const Navigation = () => {
 
             {/*Modal and navigation list items*/}
             <div className={`modal__container ${menu ? "hide__modal" : ""} `}>
-                <NavList click={handleClick}/>
-                <BtnScoot  href="#sign" title="Get Scootin"/>
+                <NavList click={handleClick} />
+                <BtnScoot href="#sign" title="Get Scootin" />
             </div>
             {/* ---------------------------------*/}
         </nav>
