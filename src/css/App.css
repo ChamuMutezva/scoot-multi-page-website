@@ -362,6 +362,8 @@ body {
 @media screen and (min-width: 67.5rem) {
   .nav {
     padding: 1.55rem 10.3125rem;
+    max-width: 1440px;
+    margin: auto;
   }
 }
 
@@ -521,6 +523,9 @@ body {
 .logo--btn {
   outline: none;
 }
+.logo--btn:focus-visible {
+  cursor: pointer;
+}
 .logo--btn:hover, .logo--btn:focus {
   cursor: pointer;
   outline: dashed #FCB72B;
@@ -556,7 +561,7 @@ body {
 }
 .cards__secondary--btn:hover, .cards__secondary--btn:focus {
   cursor: pointer;
-  outline: dashed #333A44;
+  outline: dashed #FCB72B;
   outline-offset: 0.25em;
 }
 @media screen and (min-width: 67.5rem) {
@@ -803,7 +808,7 @@ body {
   position: absolute;
   content: "";
   width: 100%;
-  height: 100%;
+  height: 85%;
   background-repeat: no-repeat;
   background-size: auto;
   top: 0;
@@ -1007,11 +1012,14 @@ To overide - solution below was used.
     background-position: 60% 100%;
   }
 }
+
 @media screen and (min-width: 67.5rem) {
-  .aside {
+  .aside__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1440px;
+    margin: auto;
   }
 }
 
@@ -1059,17 +1067,22 @@ To overide - solution below was used.
 
 .footer {
   background-color: #333A44;
+}
+
+.footer__wrapper {
   padding: 3.5rem;
 }
 @media screen and (min-width: 38.75rem) {
-  .footer {
+  .footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1440px;
+    margin: auto;
   }
 }
 @media screen and (min-width: 67.5rem) {
-  .footer {
+  .footer__wrapper {
     padding: 3.5rem 10.3125rem;
   }
 }
@@ -1530,6 +1543,11 @@ button:focus:not(:focus-visible) {
 
 .App {
   overflow-x: hidden;
+  margin: auto;
+}
+
+header,
+.main {
   max-width: 1440px;
   margin: auto;
 }
