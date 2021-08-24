@@ -26,42 +26,44 @@ const Navigation = () => {
         if (mediaQuery.matches) {
             const focusedBtns = Array.from(document.querySelectorAll(".focused--btn, .show__menu, .close__menu"))
             // select modal list
-            const nav = document.querySelector(".nav")
-            const firstFocusableElement = focusedBtns[0]
-            const lastFocusableElement = focusedBtns[focusedBtns.length - 1]
-            console.log(firstFocusableElement)
-            console.log(lastFocusableElement)
-            console.log(nav)
+            if (focusedBtns.length > 0) {
+                const nav = document.querySelector(".nav")
+                const firstFocusableElement = focusedBtns[0]
+                const lastFocusableElement = focusedBtns[focusedBtns.length - 1]
+                console.log(firstFocusableElement)
+                console.log(lastFocusableElement)
+                console.log(nav)
 
-            document.addEventListener('keydown', function (e) {
-                let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+                document.addEventListener('keydown', function (e) {
+                    let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
 
-                if (!isTabPressed) {
-                    return;
-                }
-
-                if (e.shiftKey) { // if shift key pressed for shift + tab combination
-                    if (document.activeElement === firstFocusableElement) {
-                        lastFocusableElement.focus(); // add focus for the last focusable element
-                        e.preventDefault();
+                    if (!isTabPressed) {
+                        return;
                     }
-                } else { // if tab key is pressed
-                    if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
-                        firstFocusableElement.focus(); // add focus for the first focusable element
-                        e.preventDefault();
-                    }
-                }
-            });
 
-          firstFocusableElement.focus();
+                    if (e.shiftKey) { // if shift key pressed for shift + tab combination
+                        if (document.activeElement === firstFocusableElement) {
+                            lastFocusableElement.focus(); // add focus for the last focusable element
+                            e.preventDefault();
+                        }
+                    } else { // if tab key is pressed
+                        if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+                            firstFocusableElement.focus(); // add focus for the first focusable element
+                            e.preventDefault();
+                        }
+                    }
+                });
+
+                firstFocusableElement.focus();
+            }
         }
 
         //**************************************************** */
 
     }
 
-   // mediaQuery.addListener(tabTrapper)
-   // tabTrapper(mediaQuery)
+    mediaQuery.addListener(tabTrapper)
+    tabTrapper(mediaQuery)
 
     const handleClick = (evt) => {
         const btn = document.querySelector(".show__menu")
