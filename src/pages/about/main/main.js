@@ -1,4 +1,4 @@
-//import { useState} from 'react'
+import { useEffect, useRef } from 'react'
 import SecondaryCard from '../../shared/main/cardSec'
 import BetterLiving from '../../../assets/images/better-living.jpg'
 import DigitalEra from '../../../assets/images/digital-era.jpg'
@@ -11,6 +11,11 @@ import Card from '../../shared/main/card'
 
 
 const Main = () => {
+    const aboutMain = useRef()
+
+    useEffect(() => {
+        aboutMain.current.focus()
+    })
 
     const handleSubmit = (evt) => {
         const btn = evt.target
@@ -31,14 +36,14 @@ const Main = () => {
         } else {
             btn.setAttribute("aria-expanded", "false")
         }
-      
-    }  
+
+    }
 
 
 
     return (
-        <main className="main main__about">
-            <section className="secondary"               
+        <main className="main main__about" tabIndex="-1" ref={aboutMain}>
+            <section className="secondary"
                 aria-label="our products and services">
                 <h2 className="secondary__title sr-only">Our services are here for you</h2>
 
@@ -56,7 +61,7 @@ const Main = () => {
 
             </section>
 
-            <section className="primary"               
+            <section className="primary"
                 aria-label="What we stand for and value most">
 
                 <h2 className="primary__title">Our values</h2>
@@ -110,7 +115,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne"
-                                    aria-expanded="true"                                   
+                                    aria-expanded="true"
                                     aria-controls="collapseOne">
                                     How do I download the app?
                                 </button>
@@ -139,7 +144,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo"
-                                    aria-expanded="false"                                    
+                                    aria-expanded="false"
                                     aria-controls="collapseTwo">
                                     Can I find a nearby Scoots?
                                 </button>
@@ -168,7 +173,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree"
-                                    aria-expanded="false"                                    
+                                    aria-expanded="false"
                                     aria-controls="collapseThree">
                                     Do I need a license to ride?
                                 </button>
@@ -212,7 +217,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive"
-                                    aria-expanded="true"                                    
+                                    aria-expanded="true"
                                     aria-controls="collapseFive">
                                     Should I wear a helmet?
                                 </button>
@@ -243,7 +248,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseSix"
-                                    aria-expanded="false"                                    
+                                    aria-expanded="false"
                                     aria-controls="collapseSix">
                                     How about the rules &amp; regulations?
                                 </button>
@@ -272,7 +277,7 @@ const Main = () => {
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseSeven"
-                                    aria-expanded="false"                                    
+                                    aria-expanded="false"
                                     aria-controls="collapseSeven">
                                     What if I damage my Scoot?
                                 </button>

@@ -1,12 +1,23 @@
+import { useRef, useEffect } from 'react'
 import MapMobile from '../../../assets/images/world-map-mobile.png'
 import MapTablet from '../../../assets/images/world-map-tablet.png'
 import MapDesktop from '../../../assets/images/world-map-desktop.png'
 import BtnScoot from '../../shared/header/BtnScoot'
 
 const Main = () => {
+
+    const locMain = useRef()
+
+    useEffect(() => {
+        locMain.current.focus()
+    })
+
     return (
-        <main className="main main__location">
-            <section className="primary"               
+        <main className="main main__location"
+            tabIndex="-1"
+            ref={locMain}>
+
+            <section className="primary"
                 aria-label="our areas of business worldwide">
 
                 <h2 className="sr-only">the world map showing our areas of operating</h2>
@@ -33,7 +44,7 @@ const Main = () => {
                         <h3 className="map__title">
                             Your city not listed?
                         </h3>
-                        
+
                         <p className="map__content">
                             If you’d like to see Scoot in your hometown, be sure to let us know. We track
                             requests and plan launches based on demand. Feel free to message us by clicking

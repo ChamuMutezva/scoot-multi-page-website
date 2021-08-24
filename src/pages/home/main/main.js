@@ -1,4 +1,4 @@
-//import { Link } from 'react-router-dom'
+import { useRef, useEffect } from 'react'
 import SecondaryCard from '../../shared/main/cardSec'
 /*****************  PRIMARY IMAGES *******************/
 import Locate from '../../../assets/icons/locate.svg'
@@ -12,8 +12,17 @@ import NearYou from '../../../assets/images/near-you.jpg'
 import Payments from '../../../assets/images/payments.jpg'
 
 const Main = () => {
+
+    const homeMain = useRef()
+
+    useEffect(() => {
+        homeMain.current.focus()
+    })
+
     return (
-        <main className="main main__home">
+        <main className="main main__home"
+            tabIndex="-1"
+            ref={homeMain}>
             <section className="primary"
                 aria-label="Steps to taken to successfully benefit from scoot">
 

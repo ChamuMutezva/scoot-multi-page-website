@@ -377,13 +377,6 @@ body {
   }
 }
 
-.close__menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
 .logo__wrapper {
   margin: auto;
 }
@@ -452,6 +445,13 @@ body {
   cursor: pointer;
   outline: dashed currentColor;
   outline-offset: 0.25em;
+}
+
+.hide__btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .nav__item--btn {
@@ -524,7 +524,7 @@ body {
   outline: none;
 }
 .logo--btn:focus-visible {
-  cursor: pointer;
+  background-color: #fff4df;
 }
 .logo--btn:hover, .logo--btn:focus {
   cursor: pointer;

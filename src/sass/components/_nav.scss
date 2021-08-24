@@ -23,13 +23,6 @@
     }
 }
 
-.close__menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-}
-
 .logo__wrapper {
     margin: auto;
     @media screen and (min-width: 38.75rem) {
@@ -95,6 +88,13 @@
     }
 }
 
+.hide__btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .nav__item--btn {
     color: white;
     outline: none;
@@ -158,7 +158,7 @@
 .logo--btn {
     outline: none;
     &:focus-visible {
-        cursor: pointer;
+        background-color: base.$peach;
     }
     &:hover,
     &:focus {

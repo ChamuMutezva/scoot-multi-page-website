@@ -11,12 +11,12 @@ import NavList from './navList'
 const Navigation = () => {
     const [menu, setMenu] = useState(true)
     const mediaQuery = window.matchMedia("(max-width: 619px)")
+    console.log(menu)
     // const animate = useRef()
     // gsap.registerPlugin(ScrollTrigger);
     // if (!screenWidth.matches) {
     //     return
     // }
-
 
     // Tab trapping for screens with the modal box - up to 619px
     function tabTrapper(e) {
@@ -67,17 +67,15 @@ const Navigation = () => {
 
     const handleClick = (evt) => {
         const btn = document.querySelector(".show__menu")
-        const attr = btn.getAttribute("aria-expanded");
+        const closeBtn = document.querySelector(".close__menu")
+       
+        closeBtn.classList.toggle("hide__btn")
+        btn.classList.toggle("hide__btn")
 
         setMenu(!menu)
         mediaQuery.addListener(tabTrapper)
         tabTrapper(mediaQuery)
 
-        if (attr === "false") {
-            btn.setAttribute("aria-expanded", "true")
-        } else {
-            btn.setAttribute("aria-expanded", "false")
-        }
         /*  if (menu) {
               gsap.to(animate.current, {y: 10})
           } else{
@@ -94,19 +92,35 @@ const Navigation = () => {
         <nav className="nav" aria-label="main navigation">
             {/*Opening and closing the menu */}
             <div className="menu__control">
-                <button className="show__menu" aria-label="open navigation" aria-expanded="false" onClick={handleClick}>
-                    <img className="menu__img" src={Hamburger} alt="" />
+                <button className="show__menu"
+                    aria-label="open navigation"
+                    aria-expanded="false"
+                    onClick={handleClick}>
+
+                    <img className="menu__img"
+                        src={Hamburger}
+                        alt="" />
+
                 </button>
 
-                <button className="close__menu" aria-label="close the navigation" aria-expanded="true">
-                    <img className="menu__img" src={Close} alt="" />
+                <button className={`close__menu hide__btn`}
+                    aria-label="close the navigation"
+                    aria-expanded="true"
+                    onClick={handleClick}>
+
+                    <img className="menu__img"
+                        src={Close}
+                        alt="" />
+
                 </button>
+
             </div>
             {/* ---------------------------------*/}
 
             {/*Company logo */}
             <div className="logo__wrapper">
                 <Link to="/"
+                    aria-current="page"
                     aria-label="homepage"
                     className="logo--btn focused--btn">
                     <img src={Logo} alt="Welcome to scoot international" />

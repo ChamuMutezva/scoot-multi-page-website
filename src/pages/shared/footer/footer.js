@@ -37,20 +37,33 @@ const Footer = (props) => {
 
                 <ul className="footer__socials">
                     <li className="socials__listitem">
-                        <a className="footer__socials--btn" href="www.facebook.con" aria-label="welcome to our facebook page">
-                            <img className="footer__socials--icon" src={Facebook} alt="" aria-hidden="true" />
+                        <a className="footer__socials--btn"
+                            href="www.facebook.com"
+                            aria-label="welcome to our facebook page">
+                            <img className="footer__socials--icon"
+                                src={Facebook}
+                                alt="" />
                             <span className="sr-only">Scoot facebook page</span>
                         </a>
                     </li>
+
                     <li className="socials__listitem">
-                        <a className="footer__socials--btn" href="www.twitter.com" aria-label="welcome to our twitter handle">
-                            <img className="footer__socials--icon" src={Twitter} alt="" aria-hidden="true" />
+                        <a className="footer__socials--btn"
+                            href="www.twitter.com"
+                            aria-label="welcome to our twitter handle">
+                            <img className="footer__socials--icon"
+                                src={Twitter}
+                                alt="" />
                             <span className="sr-only">Scoot facebook page</span>
                         </a>
                     </li>
+
                     <li className="socials__listitem">
-                        <a className="footer__socials--btn" href="www.instagram.com" aria-label="welcome to our instagram page">
-                            <img className="footer__socials--icon" src={Instagram} alt="" aria-hidden="true" />
+                        <a className="footer__socials--btn"
+                            href="www.instagram.com"
+                            aria-label="welcome to our instagram page">
+                            <img className="footer__socials--icon"
+                                src={Instagram} alt="" />
                             <span className="sr-only">Scoot facebook page</span>
                         </a>
                     </li>
