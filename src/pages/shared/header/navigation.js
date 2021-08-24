@@ -53,23 +53,23 @@ const Navigation = () => {
                 }
             });
 
-            firstFocusableElement.focus();
+          firstFocusableElement.focus();
         }
 
         //**************************************************** */
 
     }
 
-    mediaQuery.addListener(tabTrapper)
-    tabTrapper(mediaQuery)
+   // mediaQuery.addListener(tabTrapper)
+   // tabTrapper(mediaQuery)
 
     const handleClick = (evt) => {
         const btn = document.querySelector(".show__menu")
         const attr = btn.getAttribute("aria-expanded");
 
         setMenu(!menu)
-
-        //tabTrapper(mediaQuery)
+        mediaQuery.addListener(tabTrapper)
+        tabTrapper(mediaQuery)
 
         if (attr === "false") {
             btn.setAttribute("aria-expanded", "true")
