@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react'
 import SecondaryCard from '../../shared/main/cardSec'
 import BetterLiving from '../../../assets/images/better-living.jpg'
 import DigitalEra from '../../../assets/images/digital-era.jpg'
@@ -10,12 +9,7 @@ import Community from '../../../assets/images/our-community.jpg'
 import Card from '../../shared/main/card'
 
 
-const Main = () => {
-    const aboutMain = useRef()
-
-    useEffect(() => {
-        aboutMain.current.focus()
-    })
+const Main = () => {   
 
     const handleSubmit = (evt) => {
         const btn = evt.target
@@ -42,7 +36,7 @@ const Main = () => {
 
 
     return (
-        <main className="main main__about" tabIndex="-1" ref={aboutMain}>
+        <main className="main main__about">
             <section className="secondary"
                 aria-label="our products and services">
                 <h2 className="secondary__title sr-only">Our services are here for you</h2>

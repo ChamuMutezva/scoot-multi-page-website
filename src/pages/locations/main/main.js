@@ -1,21 +1,13 @@
-import { useRef, useEffect } from 'react'
+//import { useRef, useEffect } from 'react'
 import MapMobile from '../../../assets/images/world-map-mobile.png'
 import MapTablet from '../../../assets/images/world-map-tablet.png'
 import MapDesktop from '../../../assets/images/world-map-desktop.png'
 import BtnScoot from '../../shared/header/BtnScoot'
 
 const Main = () => {
-
-    const locMain = useRef()
-
-    useEffect(() => {
-        locMain.current.focus()
-    })
-
+   
     return (
-        <main className="main main__location"
-            tabIndex="-1"
-            ref={locMain}>
+        <main className="main main__location">
 
             <section className="primary"
                 aria-label="our areas of business worldwide">

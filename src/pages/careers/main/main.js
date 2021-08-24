@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+//import { useRef, useEffect } from 'react'
 import SecondaryCard from '../../shared/main/cardSec'
 import Careers from '../../../assets/images/join-us.jpg'
 import Card from '../../shared/main/card'
@@ -9,14 +9,14 @@ import Integrity from '../../../assets/images/our-integrity.jpg'
 import Community from '../../../assets/images/our-community.jpg'
 
 const Main = () => {
-    const careersMain = useRef()
+ /*   const careersMain = useRef()
 
     useEffect(() => {
         careersMain.current.focus()
     })
-
+*/
     return (
-        <main className="main main__careers" tabIndex="-1" ref={careersMain}>
+        <main className="main main__careers" >
             <section className="secondary"                
                 aria-label="partner with us through our career offers">
                 <h2 className="secondary__title sr-only">Careers</h2>
