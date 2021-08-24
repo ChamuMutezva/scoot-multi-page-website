@@ -1551,6 +1551,10 @@ header,
   max-width: 1440px;
   margin: auto;
 }
+header:focus-within,
+.main:focus-within {
+  border: 0.25rem solid #495567;
+}
 
 .main__about {
   margin-top: -3.5rem;

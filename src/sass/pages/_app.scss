@@ -1,3 +1,4 @@
+@use '../base';
 .App {
   overflow-x: hidden;
   //max-width: 1440px;
@@ -8,6 +9,10 @@ header,
 .main {
   max-width: 1440px;
   margin: auto;
+
+  &:focus-within {
+	  border: .25rem solid base.$mid-mid-grey;
+  }
 }
 //About page
 .main__about {
