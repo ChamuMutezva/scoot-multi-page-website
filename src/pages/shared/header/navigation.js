@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-//import { gsap } from 'gsap'
+import { gsap } from 'gsap'
 //import { ScrollTrigger } from "gsap/ScrollTrigger"
 import BtnScoot from './BtnScoot'
 import Hamburger from '../../../assets/icons/hamburger.svg'
@@ -68,13 +68,24 @@ const Navigation = () => {
     const handleClick = (evt) => {
         const btn = document.querySelector(".show__menu")
         const closeBtn = document.querySelector(".close__menu")
-       
+
         closeBtn.classList.toggle("hide__btn")
         btn.classList.toggle("hide__btn")
 
+        //animate button
+        gsap.from(".show__menu, .close__menu", {
+             duration: 1.5, 
+             opacity: 0, 
+             scale: 0.3, 
+             ease: "back",
+             rotate: "360"
+             })
+
         setMenu(!menu)
+
         mediaQuery.addListener(tabTrapper)
         tabTrapper(mediaQuery)
+
 
         /*  if (menu) {
               gsap.to(animate.current, {y: 10})

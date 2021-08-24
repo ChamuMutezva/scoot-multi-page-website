@@ -7,13 +7,15 @@ const MainCareers = () => {
     useEffect(() => {
         careersMain.current.focus()
     })
-    return(
-        <div tabIndex="-1" ref={careersMain}>
-            <Header title="Careers" careers={true}/>
+    return (
+        <div className="main__container"
+            tabIndex="-1"
+            ref={careersMain}>
+            <Header title="Careers" careers={true} />
             <Main />
         </div>
     )
 }
-    
-   
+
+
 export default MainCareers

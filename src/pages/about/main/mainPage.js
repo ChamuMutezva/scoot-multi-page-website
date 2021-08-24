@@ -7,9 +7,11 @@ const MainAbout = () => {
     useEffect(() => {
         aboutMain.current.focus()
     })
-    return(
-        <div tabIndex="-1" ref={aboutMain}>
-            <Header title="About" about={true}/>
+    return (
+        <div className="main__container"
+            tabIndex="-1"
+            ref={aboutMain}>
+            <Header title="About" about={true} />
             <Main />
         </div>
     )

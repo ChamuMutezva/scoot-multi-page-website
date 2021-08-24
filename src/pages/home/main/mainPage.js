@@ -10,7 +10,8 @@ const MainHome = () => {
 
     return (
         <div tabIndex="-1"
-        ref={homeMain}>
+            className="main__container"
+            ref={homeMain}>
             <Header title="Scooter sharing made simple" home={true}
                 content="Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient 
                         locations in each of our cities. Use our app to locate the nearest bike, unlock 

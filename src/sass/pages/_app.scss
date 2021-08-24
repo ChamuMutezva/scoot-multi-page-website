@@ -9,10 +9,9 @@ header,
 .main {
   max-width: 1440px;
   margin: auto;
-
-  &:focus-within {
-	  border: .25rem solid base.$mid-mid-grey;
-  }
+}
+.main__container {
+  outline: none;
 }
 //About page
 .main__about {

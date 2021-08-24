@@ -11,6 +11,7 @@ const MainLocation = () => {
 
     return (
         <div tabIndex="-1"
+            className="main__container"
             ref={locMain}>
             <Header title="Location" location={true} />
             <Main />
