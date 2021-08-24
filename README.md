@@ -71,6 +71,8 @@ for the accordion , each accordion will have an aria-expanded set to true or fal
 ### Continued development
 
 - refactoring the components and css to be reusable
+- animation using [gsap tutorial - scrolltrigger](https://edidiongasikpo.com/using-gsap-scrolltrigger-plugin-in-react)
+- scrolltrigger [documentation](https://greensock.com/docs/v3/Plugins/ScrollTrigger)
 
 ### Useful resources
 
