@@ -75,8 +75,7 @@ const Navigation = () => {
         //animate button
         gsap.from(".show__menu, .close__menu", {
              duration: 1.5, 
-             opacity: 0, 
-             scale: 0.3, 
+             opacity: 0,               
              ease: "back",
              rotate: "360"
              })
