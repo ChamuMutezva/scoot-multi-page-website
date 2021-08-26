@@ -3,22 +3,24 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useEffect } from "react";
 
 const Card = (props) => {
-
+   
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
 
-        gsap.to(".card", {
-            scrollTrigger: {
-                trigger: ".card",
-               start: "top top",
-               end: "bottom center",
-               scrub: true
-            }
-            
-        })
+        gsap.from(".card__img",           
+            {
+                scrollTrigger: {
+                    trigger: ".card__img",
+                   toggleActions: "restart pause reverse none",
+                },  
+                ease: "back",                         
+                duration : 3,                
+               rotation: 360,
+               stagger: 0.5,
+            })
 
-    })
+    }, [])
 
     const smallCard = props.smallCard ? "small__card" : ""
     const largeCard = props.largeCard ? "large__card" : ""
