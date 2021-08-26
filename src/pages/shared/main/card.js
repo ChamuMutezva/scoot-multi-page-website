@@ -8,7 +8,7 @@ const Card = (props) => {
 
     useEffect(() => {
 
-        gsap.from(".card__img",           
+        gsap.to(".card__img",           
             {
                 scrollTrigger: {
                     trigger: ".card__img",
